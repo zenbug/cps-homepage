@@ -138,7 +138,9 @@ a{
             justify-content: space-between;
             min-height: 700px;
             .panel__heading{
+                @extend h1;
                 @include default-text-shadow($green);
+                margin: 2rem 1rem;
                 color: white;
             }
         }
@@ -161,13 +163,24 @@ a{
         text-align: center;
         width: 100%;
     }
+    &--clinical-care{
+        margin-top: 2rem;
+        text-align: center;
+        &__img{
+            border: 5px solid $gray;
+            border-radius: 100rem;
+            margin: -110px 0 20px;
+            padding: 5px;
+            width: 150px;
+        }
+    }
 }
 .btn{
     @include default-transition;
     @include btn($dark-blue);
     display: inline-block;
-    font-size: 1rem;
-    //font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 400;
     letter-spacing: 1px;
     margin: 5px 0;
     padding: 1rem 2rem;
@@ -189,7 +202,6 @@ a{
     }
 }
 .palette{
-    margin: 0 0 5rem;
     text-align: center;
 }
 .palette__swatches{
@@ -229,7 +241,7 @@ a{
 
 .menu{
     background: $dark-blue;
-        background: $gray;
+         background: $gray;
     font-weight: 600;
     margin: 1rem 0 4rem;
     li{
