@@ -2,8 +2,13 @@
 /* If I want to override any of Foundation's variables, I do so inside my own copy of _settings.scss. It's imported into the file foundation.scss. */
 @include foundation-everything;
 
-// My custom styles are below:
+// My custom styles start here:
 
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
 $dark-blue: #003478;
 $light-blue: #79a5ff;
 $gray: #F1F1E6;
@@ -18,7 +23,11 @@ $heading-color: $dark-blue;
 $default-radius: 4px;
 $default-font-size: 18px;
 
-
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mixins
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
 @mixin default-transition{
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
@@ -39,12 +48,46 @@ $default-font-size: 18px;
     border-top: 2px solid $btn-color;
     color: white;
     &:hover{
-        background: lighten($btn-color, 7%);
+        background: lighten($btn-color, 5%);
         border-bottom: 2px solid lighten($btn-color, 2%);
         border-top: 2px solid lighten($btn-color, 7%);
     }
 }
 
+
+// Here we define the lower and upper bounds for each media size, only used as reference (from Zurb Foundation documentation):
+$small-range: (0em, 40em); /* 0, 640px */
+$medium-range: (40.063em, 64em); /* 641px, 1024px */
+$large-range: (64.063em, 90em); /* 1025px, 1440px */
+$xlarge-range: (90.063em, 120em); /* 1441px, 1920px */
+$xxlarge-range: (120.063em); /* 1921px */
+/*
+Mixin for Media Queries ("breakpoints").
+Based on this: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
+*/
+@mixin breakpoint($point) {
+	@if $point == xxlarge-range {
+		@media (min-width: 120em) { @content; }
+	}
+	@else if $point == xlarge-range {
+		@media (max-width: 120em) { @content; }
+	}
+	@else if $point == large-range {
+		@media (max-width: 90em) { @content; }
+	}
+	@else if $point == medium-range {
+		@media (max-width: 60em)  { @content; }
+	}
+	@else if $point == small-range {
+		@media (max-width: 40em)  { @content; }
+	}
+}
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
 * {
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -163,16 +206,38 @@ a{
         text-align: center;
         width: 100%;
     }
+}
+.pillar{
+    @include default-transition();
+    display: block;
     &--clinical-care{
         margin-top: 2rem;
         text-align: center;
+        border: 5px solid $gray;
+        box-shadow: none;
+        @include breakpoint(large-range) { padding: 1.5rem; }
         &__img{
             border: 5px solid $gray;
             border-radius: 100rem;
-            margin: -110px 0 20px;
-            padding: 5px;
+            margin: -120px 0 20px;
+            //padding: 5px;
             width: 150px;
         }
+        p{
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: justify;
+            @include breakpoint(large-range) { line-height: 1.5; text-align: left; }
+        }
+    }
+    &__heading{
+        color: $green;
+        font-size: 1.5rem;
+    }
+    &:hover{
+        box-shadow: 0px 2px 10px #ddd;
+        background: transparent;
+        transform: scale(1.02);
     }
 }
 .btn{
