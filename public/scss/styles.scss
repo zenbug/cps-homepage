@@ -136,6 +136,11 @@ h1{
     letter-spacing: -1px;
     font-size: 60px;
 }
+.tagline{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
 h2,
 h3{
     color: rgba($dark-blue, .6);
@@ -246,7 +251,6 @@ a{
     display: block;
     &__img{
         border-top: 5px solid $gray;
-        //border: 5px solid $cream;
         border-radius: 100rem;
         display: block;
         margin: -110px auto 20px;
@@ -276,8 +280,8 @@ a{
     &:hover{
         @include default-transition();
         box-shadow: 0px 10px 40px #cdcdcd;
-        background: rgba($green, 0.1%);
-        margin-top: 1.7rem;
+        background: rgba($cream, 0.5);
+        margin-top: 1.5rem;
     }
     &:active{
         transform: scale(.99);
