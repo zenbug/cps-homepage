@@ -246,10 +246,10 @@ a{
     display: block;
     &__img{
         border-top: 5px solid $gray;
-        border: 5px solid $cream;
+        //border: 5px solid $cream;
         border-radius: 100rem;
         display: block;
-        margin: -120px auto 20px;
+        margin: -110px auto 20px;
         //padding: 5px;
         width: 150px;
     }
@@ -274,9 +274,9 @@ a{
         font-size: 1.5rem;
     }
     &:hover{
+        @include default-transition();
         box-shadow: 0px 10px 40px #cdcdcd;
         background: rgba($green, 0.1%);
-        transform: scale(1);
         margin-top: 1.7rem;
     }
     &:active{
