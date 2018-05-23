@@ -47,7 +47,15 @@ Mixins
     border-bottom: 2px solid darken($btn-color, 5%);
     border-top: 2px solid $btn-color;
     color: white !important;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
     padding: 1rem 2rem;
+    text-transform: uppercase;
+    margin: 5px 0;
+    white-space: nowrap;
+
     &:hover{
         background: lighten($btn-color, 5%);
         border-bottom: 2px solid lighten($btn-color, 2%);
@@ -317,12 +325,17 @@ a{
     }
 }
 .header__btn{
-    @include btn($green);
     border: 0;
+    font-size: 0.8rem !important;
+    padding: 0.8rem !important;
     &:hover{
         border: 0;
-
     }
+}
+.search__btn{
+    font-size: 0.8rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .palette{
     text-align: center;
@@ -424,7 +437,7 @@ a{
     }
 }
 .menu--secondary{
-    margin-top: -1.5rem;
+    justify-content: flex-end;
 }
 
 .input-group-rounded {
@@ -438,4 +451,3 @@ a{
       font-size: 0.8rem;
     }
   }
-
