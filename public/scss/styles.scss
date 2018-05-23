@@ -332,11 +332,6 @@ a{
         border: 0;
     }
 }
-.search__btn{
-    font-size: 0.8rem !important;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
 .palette{
     text-align: center;
 }
@@ -438,16 +433,25 @@ a{
 }
 .menu--secondary{
     justify-content: flex-end;
+    &__menu{
+        margin: 0;
+    }
 }
 
-.input-group-rounded {
+.search {
+    margin-bottom: 0;
     .input-group-field {
-      border-radius: 5000px 0 0 5000px;
-      padding-left: 1rem;
+        border-radius: $default-radius 0 0 $default-radius;
+        padding-left: 1rem;
     }
 
     .input-group-button .button {
-      border-radius:  0 5000px 5000px 0;
-      font-size: 0.8rem;
+        border-radius:  0 $default-radius $default-radius 0;
+        font-size: 0.8rem;
     }
-  }
+}
+.search__btn{
+    font-size: 0.8rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
