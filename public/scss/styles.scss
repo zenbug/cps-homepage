@@ -29,11 +29,11 @@ Mixins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 @mixin default-transition{
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
+	-ms-transition: all 0.15s ease-out;
+	-o-transition: all 0.15s ease-out;
+	transition: all 0.15s ease-out;
 }
 @mixin default-box-shadow(){
     box-shadow: 0px 1px 2px #888;
@@ -46,7 +46,8 @@ Mixins
     border-radius: $default-radius;
     border-bottom: 2px solid darken($btn-color, 5%);
     border-top: 2px solid $btn-color;
-    color: white;
+    color: white !important;
+    padding: 1rem 2rem;
     &:hover{
         background: lighten($btn-color, 5%);
         border-bottom: 2px solid lighten($btn-color, 2%);
@@ -279,6 +280,7 @@ a{
     }
     &:hover{
         @include default-transition();
+        border: 5px solid rgba($green, 0.3);
         box-shadow: 0px 10px 40px #cdcdcd;
         background: rgba($cream, 0.5);
         margin-top: 1.5rem;
@@ -314,6 +316,14 @@ a{
         @include btn($green);
     }
 }
+.header__btn{
+    @include btn($green);
+    border: 0;
+    &:hover{
+        border: 0;
+
+    }
+}
 .palette{
     text-align: center;
 }
@@ -324,7 +334,7 @@ a{
 }
 .swatch{
     //border-radius: 5px;
-    height: 150px;
+    height: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -413,3 +423,19 @@ a{
         background: transparent;
     }
 }
+.menu--secondary{
+    margin-top: -1.5rem;
+}
+
+.input-group-rounded {
+    .input-group-field {
+      border-radius: 5000px 0 0 5000px;
+      padding-left: 1rem;
+    }
+
+    .input-group-button .button {
+      border-radius:  0 5000px 5000px 0;
+      font-size: 0.8rem;
+    }
+  }
+
