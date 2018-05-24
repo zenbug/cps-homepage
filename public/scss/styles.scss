@@ -19,6 +19,7 @@ $font-body: 'Muli', sans-serif;
 $font-heading: 'Merriweather', serif;
 $text-color: #333;
 $heading-color: $dark-blue;
+$link-on-dark-color: lighten($green, 15%);
 
 $default-radius: 4px;
 $default-font-size: 18px;
@@ -62,7 +63,14 @@ Mixins
         border-top: 2px solid lighten($btn-color, 7%);
     }
 }
-
+@mixin special-link-style($special-link-color){
+    color: $special-link-color;
+    border-bottom: 1px solid $special-link-color;
+    &:hover{
+        background: $special-link-color;
+        color: white;
+    }
+}
 
 // Here we define the lower and upper bounds for each media size, only used as reference (from Zurb Foundation documentation):
 $small-range: (0em, 40em); /* 0, 640px */
@@ -155,6 +163,7 @@ h3{
     color: rgba($dark-blue, .6);
     color: rgba($dark-blue, 0.6);
     font-size: 40px;
+    margin: 0rem auto 1rem;
 }
 h3{
     font-size: 30px;
@@ -174,6 +183,7 @@ a{
         color: white;
     }
 }
+
 .grid-x{
     margin-top: 2rem;
 }
@@ -309,22 +319,39 @@ a{
     }
 }
 .nrp{
+    &__content{
+        padding: 5rem;
+    }
     &__img{
         background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
         background-size: cover;
         height: 700px;
-        justify-content: center;
     }
     &__content{
         display: flex;
         align-items: center;
     }
     &__copy{
-        padding: 5rem;
         p{
             color: white;
         }
+        a{
+            @include special-link-style($dark-blue);
+        }
+        .nrp__logo{
+            border: 0;
+            display: block;
+            text-align: center;
+            &:hover{
+                background: transparent;
+            }
+            img{
+                margin: 1rem auto;
+                width: 300px;
+            }
+        }
     }
+
 }
 .btn{
     @include default-transition;
