@@ -177,7 +177,7 @@ a{
 .grid-x{
     margin-top: 2rem;
 }
-.has-vertical-space{
+.has-extra-vertical-space{
     margin-bottom: 7rem;
     margin-top: 7rem;
 }
@@ -280,8 +280,8 @@ a{
         box-shadow: none;
         @include breakpoint(large-range) { padding: 1.5rem; }
         p{
-            font-size: 1rem;
-            line-height: 1.5;
+            //font-size: 1rem;
+            //line-height: 1.5;
             text-align: justify;
             @include breakpoint(large-range) { line-height: 1.5; text-align: left; }
         }
@@ -289,6 +289,7 @@ a{
     &__heading{
         color: $green;
         font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
     &:hover{
         @include default-transition();
@@ -455,6 +456,9 @@ a{
     font-size: 0.8rem !important;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+.light-blue-bg{
+    background: $light-blue;
 }
 footer{
     background: $dark-blue;
