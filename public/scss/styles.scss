@@ -309,7 +309,22 @@ a{
     }
 }
 .nrp{
-    background: transparent url('dist/images/picsea-357040-unsplash.jpg') no-repeat 0 0;
+    &__img{
+        background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
+        background-size: cover;
+        height: 700px;
+        justify-content: center;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+    }
+    &__copy{
+        padding: 5rem;
+        p{
+            color: white;
+        }
+    }
 }
 .btn{
     @include default-transition;
