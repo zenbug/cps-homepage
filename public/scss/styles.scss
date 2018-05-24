@@ -329,6 +329,16 @@ a{
         background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
         background-size: cover;
         height: 700px;
+
+        background:
+        linear-gradient(
+          rgba($cream, 0.5),
+          rgba($light-blue, 0.5)
+        ),
+        /* bottom, image */
+        url(/dist/images/picsea-357040-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
     }
     &__content{
         display: flex;
