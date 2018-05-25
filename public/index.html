@@ -154,13 +154,11 @@ NRP
         </ul>
         <div class="tabs-content" data-tabs-content="example-tabs">
           <div class="tabs-panel is-active" id="panel1">
-            <ul class="tabs-content__list">
-              <li>Join the CPS: Membership benefits</li>
-              <li>Year in Review: Going on 17...</li>
-              <li>CPS Strategic Framework: 2017-2022</li>
-              <li>May 30 to June 2, 2018: CPS 95th Annual Conference (Quebec City)</li>
-              <li>October 19 to 21, 2018: CPS Lifelong Learning in Paediatrics (LLP) in Banff</li>
-              <li>March 22 to 24, 2019: The 8th International Meeting on Indigenous Child Health (Calgary)</li>
+          <p>Maybe some intro text about events? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat minima corrupti voluptatum quidem quisquam. Aut ullam assumenda eligendi obcaecati illo, iste accusantium soluta laborum pariatur exercitationem iure. Unde, placeat.</p>
+            <ul class="tabs-content__list events">
+              <li class="events__item"><span class="events__date">May 30 to June 2, 2018</span> CPS 95th Annual Conference (Quebec City)</li>
+              <li class="events__item"><span class="events__date">October 19 to 21, 2018</span> CPS Lifelong Learning in Paediatrics (LLP) in Banff</li>
+              <li class="events__item"><span class="events__date">March 22 to 24, 2019</span> The 8th International Meeting on Indigenous Child Health (Calgary)</li>
             </ul>
           </div><!-- /.tabs-panel -->
           <div class="tabs-panel tabs-content__panel position-statements" id="panel2">
@@ -195,7 +193,7 @@ NRP
       <p><a href="#">Join now</a> to help fulfill our mission and enjoy the benefits of membership.</p>
 
 <div class="button-group-option" data-grouptype="Or">
-  <a href="#" class="button success radius btn">Join the CPS</a>
+  <a href="#" class="button success radius btn">Join us</a>
   <a href="#" class="button primary radius btn slide-trigger">Log in</a>
 </div>
 
@@ -203,18 +201,19 @@ NRP
 <form class="member-login__form">
   <div class="grid-container">
     <div class="grid-x grid-padding-x no-top-margin">
-      <div class="medium-6 cell">
+      <div class="medium-12 large-6 cell">
         <label class="member-login__label">Email
           <input type="text" placeholder="Enter your email">
         </label>
       </div>
-      <div class="medium-6 cell">
-        <label class="member-login__label">Password (<a href="#">Forgot?</a>)
+      <div class="medium-12 large-6 cell">
+        <label class="member-login__label">Password
           <input type="text" placeholder="Enter your password">
         </label>
       </div>
       <div class="medium-12 cell">
-        <input type="submit" class="member-login__btn btn button btn--green expanded">
+        <input type="submit" class="member-login__btn btn button btn--green expanded" value="Log in">
+        <p><a href="#">Forgot your password?</a></p>
       </div>
     </div>
   </div>

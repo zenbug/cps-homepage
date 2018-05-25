@@ -329,6 +329,20 @@ a{
     }
 }
 
+.events{
+    list-style-type: none;
+    margin: 0;
+    &__item{
+        margin: 0.5rem 0;
+    }
+    &__date{
+        color: $light-blue;
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
 .nrp{
     &__content-container{
         display: flex;
@@ -672,7 +686,7 @@ a{
 // Either/Or button group (https://foundation.zurb.com/building-blocks/blocks/button-group-option.html):
 $button-group-option-font-size: 1rem; // controls size of circle and text of option
 $button-group-option-button-gap: 0.35rem;
-$button-group-option-button-fontsize: rem-calc(18); // controls size of button and text of button
+$button-group-option-button-fontsize: 1rem; // controls size of button and text of button
 
 .button-group-option {
   position: relative;
@@ -713,6 +727,7 @@ $button-group-option-button-fontsize: rem-calc(18); // controls size of button a
     display: none;
     font-family: $font-body;
     margin-top: -1rem;
+    padding: 1rem;
     &__label{
         font-size: 1rem;
     }
