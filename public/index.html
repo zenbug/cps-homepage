@@ -155,10 +155,11 @@ NRP
         <div class="tabs-content" data-tabs-content="example-tabs">
           <div class="tabs-panel is-active" id="panel1">
           <p>Maybe some intro text about events? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat minima corrupti voluptatum quidem quisquam. Aut ullam assumenda eligendi obcaecati illo, iste accusantium soluta laborum pariatur exercitationem iure. Unde, placeat.</p>
-            <ul class="tabs-content__list events">
-              <li class="events__item"><span class="events__date meta">May 30 to June 2, 2018</span><a href="">CPS 95th Annual Conference (Quebec City)</a></li>
-              <li class="events__item"><span class="events__date meta">October 19 to 21, 2018</span><a href="">CPS Lifelong Learning in Paediatrics (LLP) in Banff</a></li>
-              <li class="events__item"><span class="events__date meta">March 22 to 24, 2019</span><a href="">The 8th International Meeting on Indigenous Child Health (Calgary)</a></li>
+            <ul class="tabs-content__list events has-meta">
+              <li class="has-meta__item"><span class="has-meta__date">May 30 to June 2, 2018</span><a href="">CPS 95th Annual Conference (Quebec City)</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">October 19 to 21, 2018</span><a href="">CPS Lifelong Learning in Paediatrics (LLP) in Banff</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">March 22 to 24, 2019</span><a href="">The 8th International Meeting on Indigenous Child Health (Calgary)</a></li>
+              <li class="has-meta__item text-right"><a href="#" class="button btn small">More news and events</a></li>
             </ul>
           </div><!-- /.tabs-panel -->
           <div class="tabs-panel tabs-content__panel position-statements" id="panel2">
@@ -172,11 +173,12 @@ NRP
             </div><!-- /.input-group -->
             <div class="position-statements__browse">
             <h3>Or browse</h3>
-            <ul>
-              <li><a href="#">Immunization of the immunocompromised child: Key principles</a></li>
-              <li><a href="#">Managing infants born to mothers who have used opioids during pregnancy</a></li>
-              <li><a href="#">Decision-making around gastrostomy tube feeding in children with neurologic impairment: Engaging effectively with families</a></li>
-              <li><a href="#">Find more position statements...</a></li>
+            <p>Filter by <a href="" class="has-meta__category">Authoring Group</a>, <a href="" class="has-meta__category">Date</a>, or <a href="" class="has-meta__category">Topic</a></p>
+            <ul class="tabs-content__list events has-meta">
+              <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Immunization of the immunocompromised child: Key principles</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Managing infants born to mothers who have used opioids during pregnancy</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Decision-making around gastrostomy tube feeding in children with neurologic impairment: Engaging effectively with families</a></li>
+              <li class="has-meta__item text-right"><a href="#" class="button btn small">More position statements</a></li>
             </ul>
             </div><!-- /.browse -->
           </div><!-- /.tabs-panel -->
@@ -193,7 +195,7 @@ NRP
       <p><a href="#">Join now</a> to help fulfill our mission and enjoy the benefits of membership.</p>
 
 <div class="button-group-option" data-grouptype="Or">
-  <a href="#" class="button success radius btn">Join us</a>
+  <a href="https://www.cps.ca/en/members-membres" class="button success radius btn">Join us</a>
   <a href="#" class="button primary radius btn slide-trigger">Log in</a>
 </div>
 
@@ -213,7 +215,7 @@ NRP
       </div>
       <div class="medium-12 cell">
         <input type="submit" class="member-login__btn btn button btn--green expanded" value="Log in">
-        <p><a href="#">Forgot your password?</a></p>
+        <p class="member-login__forgot"><a href="#">Forgot your password?</a></p>
       </div>
     </div>
   </div>
