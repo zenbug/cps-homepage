@@ -160,7 +160,7 @@ h1{
 }
 h2,
 h3{
-    color: rgba($dark-blue, 0.6);
+    color: rgba($dark-blue, 0.7);
     font-size: 40px;
     margin: 0rem auto 1rem;
 }
@@ -312,7 +312,7 @@ a{
         }
     }
     &__heading{
-        color: $green;
+        //color: $green;
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
@@ -364,17 +364,18 @@ a{
         @include breakpoint(large-range) { padding: 0rem 3rem; }
     }
     &__img{
+        background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
         background-size: cover;
         height: 800px;
-// no sure about this gradient so I'm overriding it below. Too washed out?:
+
         background:
         linear-gradient(
-          rgba($cream, 0.5),
-          rgba($light-blue, 0.5)
+          rgba($cream, 0.3),
+          rgba($light-blue, 0.3)
         ),
         /* bottom, image */
         url(/dist/images/picsea-357040-unsplash.jpg);
-        background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
+
         background-size: cover;
         background-position: center;
     }
@@ -664,7 +665,7 @@ a{
         a{
             background: transparent;
             border: 0;
-            color: rgba($heading-color, .5);
+            color: rgba($heading-color, .7);
             font-family: $font-heading;
             font-size: 30px;
             outline: none;
@@ -680,7 +681,7 @@ a{
                 background: white;
                 border-radius: 4px 4px 0 0;
                 box-shadow: 0px -3px 5px #eee;
-                color: rgba($dark-blue, 0.6);
+                color: rgba($dark-blue, 0.7);
             }
 
         }
