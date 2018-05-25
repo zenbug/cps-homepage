@@ -194,6 +194,10 @@ a{
     margin-bottom: 7rem;
     margin-top: 7rem;
 }
+.tabs,
+.tabs-content{
+    border: 0;
+}
 .hero{
     background: transparent url('/dist/images/leo-rivas-397551-unsplash.jpg') no-repeat center center;
     background-size: cover;
@@ -321,9 +325,17 @@ a{
         //margin-top: 0rem;
     }
 }
+
 .nrp{
+    &__content-container{
+        display: flex;
+        align-items: center;
+    }
     &__content{
-        padding: 5rem;
+        margin: 0;
+        padding: 3rem 10rem;
+        @include breakpoint(xlarge-range) { padding: 3rem 5rem; }
+        @include breakpoint(large-range) { padding: 0rem 3rem; }
     }
     &__img{
         background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
@@ -343,6 +355,10 @@ a{
     &__content{
         display: flex;
         align-items: center;
+        @include breakpoint(small-range) {
+            background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
+            background-size: cover;
+        }
     }
     &__copy{
         p{
@@ -362,6 +378,7 @@ a{
             img{
                 margin: 1rem auto;
                 width: 300px;
+                @include breakpoint(large-range) { width: 200px; }
             }
         }
     }
@@ -554,6 +571,7 @@ a{
         }
     }
     &__contact{
+        text-align: left;
         p{
             color: white;
             font-size: inherit;
@@ -602,5 +620,10 @@ a{
     &__item{ // <li>
         line-height: 1;
         margin: 0.7rem 0;
+    }
+}
+.tabs{
+    &__title{
+        font-size: 2rem;
     }
 }

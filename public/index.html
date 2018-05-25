@@ -126,9 +126,9 @@ NRP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
 <div class="grid-x grid-padding-x nrp">
-  <div class="cell medium-6 nrp__img">
+  <div class="cell hide-for-small-only medium-4 large-6 nrp__img">
   </div><!-- /.cell -->
-  <div class="cell medium-6 light-blue ">
+  <div class="cell medium-8 large-6 light-blue nrp__content-container">
   <div class="grid-x grid-padding-x nrp__content">
     <div class="nrp__copy">
       <a href="" class="nrp__logo"><img src="/dist/images/logo-nrp.png" alt="" /></a>
@@ -140,21 +140,60 @@ NRP
   </div><!-- /.cell -->
 </div><!-- /.grid-x grid-margin-x grid-padding-x -->
 
-<div class="grid-container">
+<div class="grid-container has-extra-vertical-space">
 <div class="grid-x grid-margin-x grid-padding-x">
-  <div class="cell medium-4">
-    <div class="panel">
-      <h2>News</h2>
-    </div><!-- /.panel -->
+  <div class="cell medium-8">
+
+
+    <div class="grid-x">
+      <div class="cell">
+
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active tabs__title"><a href="#panel1" aria-selected="true">News and Events</a></li>
+          <li class="tabs-title"><a href="#panel2" class="tabs__title">Position Statements</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel is-active" id="panel1">
+            <h2 class="tabs-content__heading">News and Events</h2>
+            <ul class="tabs-content__list">
+              <li>Join the CPS: Membership benefits</li>
+              <li>Year in Review: Going on 17...</li>
+              <li>CPS Strategic Framework: 2017-2022</li>
+              <li>May 30 to June 2, 2018: CPS 95th Annual Conference (Quebec City)</li>
+              <li>October 19 to 21, 2018: CPS Lifelong Learning in Paediatrics (LLP) in Banff</li>
+              <li>March 22 to 24, 2019: The 8th International Meeting on Indigenous Child Health (Calgary)</li>
+            </ul>
+          </div><!-- /.tabs-panel -->
+          <div class="tabs-panel tabs-content__panel" id="panel2">
+            <h2 class="tabs-content__heading">Position Statements</h2>
+            <p>Canadian Paediatric Society position statements and practice points have clinical guidance and policy recommendations for paediatricians, family physicians, nurses, government officials and others. They also include links to other relevant documents and resources, including information for parents.</p>
+            <h3>Search our position statements</h3>
+            <div class="input-group input-group search">
+              <input class="input-group-field search__keywords" type="search">
+              <div class="input-group-button">
+                <input type="submit" class="button search__btn" value="Search">
+              </div><!-- /.input-group-button -->
+            </div><!-- /.input-group -->
+            <ul>
+              <li><a href="#">Immunization of the immunocompromised child: Key principles</a></li>
+              <li><a href="#">Managing infants born to mothers who have used opioids during pregnancy</a></li>
+              <li><a href="#">Decision-making around gastrostomy tube feeding in children with neurologic impairment: Engaging effectively with families</a></li>
+            </ul>
+          </div><!-- /.tabs-panel -->
+        </div><!-- /.tabs-content -->
+
+      </div><!-- /.cell -->
+    </div><!-- /.grid-x -->
+
   </div><!-- /.cell medium-12 -->
+
   <div class="cell medium-4">
     <div class="panel">
-      <h2>News</h2>
-    </div><!-- /.panel -->
-  </div><!-- /.cell medium-12 -->
-  <div class="cell medium-4">
-    <div class="panel">
-      <h2>News</h2>
+      <h2>CPS Members</h2>
+      <p>If you are involved in child and youth health care, consider joining the Canadian Paediatric Society. The CPS is the professional home of more than 3,000 paediatricians, paediatric subspecialists and other child health providers, including family physicians and nurses.</p>
+      <p><a href="#">Join now</a> to help fulfill our mission and enjoy the benefits of membership.</p>
+      <p class="text-center"><a href="#" class="btn">Join the CPS</a></p>
+      <p class="text-center">Already a member? <a href="#">Log in</a>.</p>
     </div><!-- /.panel -->
   </div><!-- /.cell medium-12 -->
 </div><!-- /.grid-x grid-margin-x grid-padding-x -->
@@ -210,6 +249,7 @@ Footer
       <div class="cell medium-12 footer__copy">
       <div class="grid-x grid-padding-x">
         <div class="cell medium-3 large-2 large-offset-2 footer__contact">
+          <h4 class="footer__heading">Contact Us</h4>
           <p>2305 St. Laurent Blvd<br>Suite 100<br>Ottawa, ON Canada<br>K1G 4J8</p>
           <p>
             <span><i class="fa fa-phone" aria-hidden="true"></i> Telephone:</span> <a href="tel:+16135269397">613-526-9397</a> <br>
@@ -223,8 +263,8 @@ Footer
         </div><!-- /.cell medium-4 -->
 
         <div class="cell medium-3 large-2  footer__social">
-          <h4 class="footer__heading">The CPS on social media</h4>
-          <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+          <h4 class="footer__heading">The CPS online</h4>
+          <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
         </div><!-- /.cell  -->
