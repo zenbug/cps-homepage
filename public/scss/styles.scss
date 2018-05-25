@@ -364,10 +364,9 @@ a{
         @include breakpoint(large-range) { padding: 0rem 3rem; }
     }
     &__img{
-        background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
         background-size: cover;
         height: 800px;
-
+// no sure about this gradient so I'm overriding it below. Too washed out?:
         background:
         linear-gradient(
           rgba($cream, 0.5),
@@ -375,6 +374,7 @@ a{
         ),
         /* bottom, image */
         url(/dist/images/picsea-357040-unsplash.jpg);
+        background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
         background-size: cover;
         background-position: center;
     }
@@ -408,7 +408,6 @@ a{
             }
         }
     }
-
 }
 .btn{
     @include default-transition;
@@ -690,6 +689,9 @@ a{
 .position-statements{
     &__browse{
         margin: 1rem 0;
+        h3{
+            margin: 0;
+        }
     }
 }
 
