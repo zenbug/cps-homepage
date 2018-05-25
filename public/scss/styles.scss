@@ -424,9 +424,9 @@ a{
     white-space: nowrap;
     &:hover{
         box-shadow: 0px 0px 20px rgba(#000, 0.5);
-        background-color: lighten($dark-blue, 15%);
-        border-bottom: 2px solid lighten($dark-blue, 10%);
-        border-top: 2px solid lighten($dark-blue, 15%);
+        background-color: $green;
+        border-bottom: 2px solid darken($green, 5%);
+        border-top: 2px solid $green;
         color: white;
     }
     &:visited{
@@ -651,6 +651,7 @@ a{
 .tabs-content{
     @extend .panel;
     border-radius: 0 0 4px 4px;
+    margin-bottom: 2rem;
 }
 // This rule doesn't use the BEM syntax because I'm tageting Foundation's tabs to override their default styles:
 .tabs{
@@ -704,7 +705,7 @@ $button-group-option-button-fontsize: 1rem; // controls size of button and text 
   @include button-group;
   @include button-group-expand('.button');
 
-  .button {
+  .button{
     font-size: $button-group-option-button-fontsize;
     background: $dark-blue;
     border: 0;
