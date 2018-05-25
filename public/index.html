@@ -149,24 +149,15 @@ NRP
       <div class="cell">
 
         <ul class="tabs" data-tabs id="example-tabs">
-          <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">News and Events</a></li>
-          <li class="tabs-title"><a href="#panel2">Position Statements</a></li>
+          <li class="tabs-title is-active"><a href="#panel1">Position Statements</a></li>
+          <li class="tabs-title"><a href="#panel2" aria-selected="true">News and Events</a></li>
         </ul>
         <div class="tabs-content" data-tabs-content="example-tabs">
-          <div class="tabs-panel is-active" id="panel1">
-          <p>Maybe some intro text about events? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat minima corrupti voluptatum quidem quisquam. Aut ullam assumenda eligendi obcaecati illo, iste accusantium soluta laborum pariatur exercitationem iure. Unde, placeat.</p>
-            <ul class="tabs-content__list events has-meta">
-              <li class="has-meta__item"><span class="has-meta__date">May 30 to June 2, 2018</span><a href="">CPS 95th Annual Conference (Quebec City)</a></li>
-              <li class="has-meta__item"><span class="has-meta__date">October 19 to 21, 2018</span><a href="">CPS Lifelong Learning in Paediatrics (LLP) in Banff</a></li>
-              <li class="has-meta__item"><span class="has-meta__date">March 22 to 24, 2019</span><a href="">The 8th International Meeting on Indigenous Child Health (Calgary)</a></li>
-              <li class="has-meta__item text-right"><a href="#" class="button btn small">More news and events</a></li>
-            </ul>
-          </div><!-- /.tabs-panel -->
-          <div class="tabs-panel tabs-content__panel position-statements" id="panel2">
+          <div class="tabs-panel is-active tabs-content__panel position-statements" id="panel1">
             <p>Canadian Paediatric Society position statements and practice points have clinical guidance and policy recommendations for paediatricians, family physicians, nurses, government officials and others. They also include links to other relevant documents and resources, including information for parents.</p>
             <h3>Search our position statements</h3>
             <div class="input-group input-group search">
-              <input class="input-group-field search__keywords" type="search">
+              <input class="input-group-field search__keywords" type="search" placeholder="What are you looking for?">
               <div class="input-group-button">
                 <input type="submit" class="button search__btn" value="Search">
               </div><!-- /.input-group-button -->
@@ -178,9 +169,18 @@ NRP
               <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Immunization of the immunocompromised child: Key principles</a></li>
               <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Managing infants born to mothers who have used opioids during pregnancy</a></li>
               <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Decision-making around gastrostomy tube feeding in children with neurologic impairment: Engaging effectively with families</a></li>
-              <li class="has-meta__item text-right"><a href="#" class="button btn small">More position statements</a></li>
+              <li class="has-meta__item text-right"><a href="#" class="button btn small">More position statements &rarr;</a></li>
             </ul>
             </div><!-- /.browse -->
+          </div><!-- /.tabs-panel -->
+          <div class="tabs-panel" id="panel2">
+          <p>Maybe some intro text about events? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis fugiat minima corrupti voluptatum quidem quisquam. Aut ullam assumenda eligendi obcaecati illo, iste accusantium soluta laborum pariatur exercitationem iure. Unde, placeat.</p>
+            <ul class="tabs-content__list events has-meta">
+              <li class="has-meta__item"><span class="has-meta__date">May 30 to June 2, 2018</span><a href="">CPS 95th Annual Conference (Quebec City)</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">October 19 to 21, 2018</span><a href="">CPS Lifelong Learning in Paediatrics (LLP) in Banff</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">March 22 to 24, 2019</span><a href="">The 8th International Meeting on Indigenous Child Health (Calgary)</a></li>
+              <li class="has-meta__item text-right"><a href="#" class="button btn small">More news and events &rarr;</a></li>
+            </ul>
           </div><!-- /.tabs-panel -->
         </div><!-- /.tabs-content -->
 
