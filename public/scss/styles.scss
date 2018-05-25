@@ -663,6 +663,11 @@ a{
         }
     }
 }
+.position-statements{
+    &__browse{
+        margin: 1rem 0;
+    }
+}
 
 // Either/Or button group (https://foundation.zurb.com/building-blocks/blocks/button-group-option.html):
 $button-group-option-font-size: 1rem; // controls size of circle and text of option
@@ -704,13 +709,10 @@ $button-group-option-button-fontsize: rem-calc(18); // controls size of button a
   }
 }
 
-.slide-event{
-    display: none;
-    display: block;
-}
 .member-login{
     display: none;
     font-family: $font-body;
+    margin-top: -1rem;
     &__label{
         font-size: 1rem;
     }
