@@ -622,8 +622,33 @@ a{
         margin: 0.7rem 0;
     }
 }
+.tabs-content{
+    @extend .panel;
+    border-radius: 0 0 4px 4px;
+}
+// This rule doesn't use the BEM syntax because I'm tageting Foundation's tabs to override their default styles:
 .tabs{
-    &__title{
-        font-size: 2rem;
+    background: transparent;
+    &-title{
+        background: transparent;
+        text-align: center;
+        width: 50% !important;
+        border-radius: 4px 4px 0 0;
+        box-shadow: 0px -3px 5px #dedede;
+        a{
+            background: transparent;
+            border: 0;
+            color: rgba($heading-color, .5);
+            font-family: $font-heading;
+            font-size: 2rem;
+            outline: none;
+        }
+        &.is-active{
+            a{
+                background: white;
+                border-radius: 4px 4px 0 0;
+            }
+
+        }
     }
 }
