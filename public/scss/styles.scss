@@ -221,12 +221,13 @@ a{
     }
     &__copy{
         //background: rgba(#000, .5);
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
         align-self: flex-end;
         border-radius: 3px;
-        margin: 1rem 0;
-        padding: 1rem 5rem;
-        text-align: center;
-        width: 100%;
+        margin: 1rem;
+        padding: 1rem;
+        width: 35%;
     }
     &__paragraph{
         color: white;
