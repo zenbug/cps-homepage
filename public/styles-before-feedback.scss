@@ -204,18 +204,18 @@ a{
 .hero{
     background: transparent url('/dist/images/girl-with-flower.jpg') no-repeat center center;
     background-size: cover;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: space-between;
-    //margin: 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem 0 0;
     min-height: 500px;
     @include breakpoint(large-range) { min-height: 400px; }
     &__heading{
-        @extend h2;
+        @extend h1;
         @include default-text-shadow($green);
-        //margin: 2rem 1rem;
+        margin: 2rem 1rem;
         color: white;
-        //align-self: center;
+        align-self: center;
         padding: 50px;
         text-align: center;
     }
@@ -223,9 +223,9 @@ a{
         //background: rgba(#000, .5);
         background: rgba(0, 0, 0, 0.3);
         border-radius: 4px;
-        //align-self: flex-end;
+        align-self: flex-end;
         border-radius: 3px;
-        //margin: 1rem;
+        margin: 1rem;
         padding: 1rem;
     }
     &__paragraph{
@@ -478,12 +478,6 @@ a{
 .light-blue{
     background: $light-blue;
 }
-.lighter-blue{
-    background: lighten($light-blue, 10%);
-}
-.lightest-blue{
-    background: lighten($light-blue, 20%);
-}
 .gray{
     background: $gray;
 }
@@ -580,19 +574,6 @@ a{
 }
 .light-blue-bg{
     background: $light-blue;
-}
-.color-column{
-    &__item{
-        height: 100%;
-        float: right;
-        width: 5%;
-        &--right{
-            height: 100%;
-            float: right;
-            width: 5%;
-            float: left;
-        }
-    }
 }
 .footer{
     background: $dark-blue;
