@@ -147,13 +147,18 @@ h1, h2, h3, h4, h5, h6{
     line-height: 1.2;
 }
 .page-title{
-    &__heading{
+    margin-right: 0;
+
+    &__heading{ // h1
         color: $heading-color;
         font-family: $font-heading;
         font-weight: 900;
         letter-spacing: -1px;
-        font-size: 50px;
+        font-size: 40px;
         text-align: center;
+        background: transparent url('/dist/images/glow.png') no-repeat center center;
+        min-height: 250px;
+        padding-top: 100px;
         @include breakpoint(small-range){font-size: 20px;}
         @include breakpoint(medium-range){font-size: 30px;}
         @include breakpoint(large-range){font-size: 40px;}
