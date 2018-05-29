@@ -146,16 +146,18 @@ h1, h2, h3, h4, h5, h6{
     //font-size: 46px;
     line-height: 1.2;
 }
-h1.page-title{
-    color: $heading-color;
-    font-family: $font-heading;
-    font-weight: 900;
-    letter-spacing: -1px;
-    font-size: 50px;
-    text-align: center;
-    @include breakpoint(small-range){font-size: 20px;}
-    @include breakpoint(medium-range){font-size: 30px;}
-    @include breakpoint(large-range){font-size: 40px;}
+.page-title{
+    &__heading{
+        color: $heading-color;
+        font-family: $font-heading;
+        font-weight: 900;
+        letter-spacing: -1px;
+        font-size: 50px;
+        text-align: center;
+        @include breakpoint(small-range){font-size: 20px;}
+        @include breakpoint(medium-range){font-size: 30px;}
+        @include breakpoint(large-range){font-size: 40px;}
+    }
 }
 .tagline{
     font-size: 1.5rem;
