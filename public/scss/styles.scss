@@ -146,13 +146,16 @@ h1, h2, h3, h4, h5, h6{
     //font-size: 46px;
     line-height: 1.2;
 }
-h1{
+h1.page-title{
     color: $heading-color;
     font-family: $font-heading;
     font-weight: 900;
     letter-spacing: -1px;
     font-size: 50px;
     text-align: center;
+    @include breakpoint(small-range){font-size: 20px;}
+    @include breakpoint(medium-range){font-size: 30px;}
+    @include breakpoint(large-range){font-size: 40px;}
 }
 .tagline{
     font-size: 1.5rem;
@@ -205,11 +208,13 @@ a{
 .hero{
     background: transparent url('/dist/images/girl-with-flower.jpg') no-repeat center center;
     background-size: cover;
-    //display: flex;
+    border-radius: $default-radius;
+    display: flex;
     //flex-direction: column;
-    //justify-content: space-between;
+    align-items: flex-end;
     //margin: 2rem 0 0;
     min-height: 500px;
+    padding: 1rem;
     @include breakpoint(large-range) { min-height: 400px; }
     &__heading{
         @extend h2;
@@ -217,15 +222,16 @@ a{
         //margin: 2rem 1rem;
         color: white;
         //align-self: center;
-        padding: 50px;
+        padding: 2rem;
         text-align: center;
     }
     &__copy{
         //background: rgba(#000, .5);
         background: rgba(0, 0, 0, 0.3);
+            background: rgba($dark-blue, 0.6);
         border-radius: 4px;
         //align-self: flex-end;
-        border-radius: 3px;
+        border-radius: $default-radius;
         //margin: 1rem;
         padding: 1rem;
     }
@@ -288,7 +294,7 @@ a{
 .pillar{
     @include default-transition();
     display: block;
-    &__img{
+    &__img{ // * Circle icons at the top of each pillar
         border-top: 5px solid $gray;
         border-radius: 100rem;
         display: block;
@@ -299,11 +305,12 @@ a{
     &--public-policy,
     &--knowledge-translation,
     &--clinical-care{
-        display: block;
-        margin-top: 2rem;
-        text-align: center;
         border: 5px solid $gray;
         box-shadow: none;
+        display: block;
+        margin-top: 2rem;
+        //padding: 2rem;
+        text-align: center;
         @include breakpoint(large-range) { padding: 1.5rem; }
         p{
             //font-size: 1rem;
