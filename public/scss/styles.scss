@@ -221,7 +221,7 @@ a{
     //margin: 2rem 0 0;
     min-height: 500px;
     padding: 1rem;
-    overflow: hidden;
+    //overflow: hidden;
     position: relative;
     @include breakpoint(large-range) { min-height: 400px; }
     &__curve{
