@@ -225,9 +225,13 @@ a{
     position: relative;
     @include breakpoint(large-range) { min-height: 400px; }
     &__curve{
-        left: -65px;
+        background: transparent url('/dist/images/hero-curve.png') no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        left: 0rem;
         position: absolute;
-        top: -100px;
+        top: 0px;
+        width: 265px;
     }
     &__heading{
         @extend h2;
@@ -380,7 +384,13 @@ a{
     }
     &__content{
         margin: 0;
-        padding: 3rem 10rem;
+        padding: 0rem;
+        display: flex;
+        align-items: center;
+        @include breakpoint(small-range) {
+            background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
+            background-size: cover;
+        }
         @include breakpoint(xlarge-range) { padding: 3rem 5rem; }
         @include breakpoint(large-range) { padding: 0rem 3rem; }
     }
@@ -400,17 +410,9 @@ a{
         background-size: cover;
         background-position: center;
     }
-    &__content{
-        display: flex;
-        align-items: center;
-        @include breakpoint(small-range) {
-            background: $light-blue url('/dist/images/picsea-357040-unsplash.jpg') no-repeat center center;
-            background-size: cover;
-        }
-    }
     &__copy{
         p{
-            color: white;
+            color: $text-color;
         }
         a{
             @include special-link-style($dark-blue);
@@ -614,6 +616,12 @@ a{
             float: left;
         }
     }
+}
+.news-container{
+    background: $light-blue;
+    //box-shadow: inset 0 3px 3px #bbb;
+    //padding: 2rem 0;
+    height: 500px;
 }
 .footer{
     font-size: 0.9rem;
