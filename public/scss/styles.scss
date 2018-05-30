@@ -138,6 +138,31 @@ body, p, span{
 header.grid-x{
     margin-top: 0;
 }
+.header{
+    .social{
+        align-items: center;
+        margin-top: 0px;
+        &__item{
+            border: 0;
+            font-size: 2rem;
+            margin: 0;
+            padding: 0 5px;
+            &:hover{
+                background: transparent;
+                box-shadow: none;
+                color: $green !important;
+            }
+            i{
+                color: $dark-blue;
+            }
+        }
+        &.menu{
+            li{
+                border: 0;
+            }
+        }
+    }
+}
 h1, h2, h3, h4, h5, h6{
     color: $heading-color;
     font-family: $font-heading;
@@ -146,9 +171,7 @@ h1, h2, h3, h4, h5, h6{
     //font-size: 46px;
     line-height: 1.2;
 }
-.page-title{
-    margin-right: 0;
-    &__heading{ // h1
+.tagline{
         color: $heading-color;
         font-family: $font-heading;
         font-weight: 900;
@@ -159,25 +182,20 @@ h1, h2, h3, h4, h5, h6{
         //min-height: 250px;
         padding-top: 1rem;
         margin: 1.5rem 0;
-        // * The following three Felxbox lines are to make the tagline break after the comma:
+        // * The following three Felxbox lines make the tagline break after the comma:
         display: flex;
         flex-direction: column;
         align-items: center;
         @include breakpoint(small-range){font-size: 20px;}
         @include breakpoint(medium-range){font-size: 30px;}
         @include breakpoint(large-range){font-size: 40px;}
-    }
-}
-.page-title__span{
-    @extend .page-title__heading;
-    margin: 0;
-    padding: 0;
-    line-height: 1.2;
-}
-.tagline{
-    font-size: 1.5rem;
-    margin: 2rem;
-    text-align: center;
+        &__span{
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
 }
 h2,
 h3{
@@ -225,7 +243,7 @@ a{
 .hero{
     background: transparent url('/dist/images/girl-with-flower.jpg') no-repeat center center;
     background-size: cover;
-    border-radius: $default-radius;
+    border-radius: $default-radius 50px 50px $default-radius;
     display: flex;
     //flex-direction: column;
     align-items: flex-end;
@@ -257,9 +275,8 @@ a{
         //background: rgba(#000, .5);
         background: rgba(0, 0, 0, 0.3);
             background: rgba($dark-blue, 0.5);
-        border-radius: 4px;
+        border-radius: $default-radius $default-radius 50px $default-radius;
         //align-self: flex-end;
-        border-radius: $default-radius;
         //margin: 1rem;
         padding: 1rem;
     }
@@ -334,6 +351,7 @@ a{
     &--knowledge-translation,
     &--clinical-care{
         border: 5px solid $gray;
+        border-radius: $default-radius;
         box-shadow: none;
         display: block;
         margin-top: 2rem;
@@ -593,7 +611,7 @@ a{
 }
 
 .search {
-    margin-bottom: 0;
+    margin: 1rem 0 0;
     .input-group-field {
         border-radius: $default-radius 0 0 $default-radius;
         padding-left: 1rem;
