@@ -148,7 +148,6 @@ h1, h2, h3, h4, h5, h6{
 }
 .page-title{
     margin-right: 0;
-
     &__heading{ // h1
         color: $heading-color;
         font-family: $font-heading;
@@ -156,7 +155,7 @@ h1, h2, h3, h4, h5, h6{
         letter-spacing: -1px;
         font-size: 40px;
         text-align: center;
-        background: transparent url('/dist/images/glow.png') no-repeat center center;
+        //background: transparent url('/dist/images/glow.png') no-repeat center center;
         min-height: 250px;
         padding-top: 100px;
         @include breakpoint(small-range){font-size: 20px;}
@@ -617,9 +616,8 @@ a{
     }
 }
 .footer{
-    background: $dark-blue;
     font-size: 0.9rem;
-    padding: 2rem 0;
+    padding: 0rem 0;
     margin-top: 15rem;
     text-align: center;
     background-color: #003478;
@@ -669,8 +667,8 @@ a{
         color: $light-blue;
     }
 }
-
 .footer_sitemap{
+    background: darken($dark-blue, 5%);
     border-bottom: 1px solid lighten($dark-blue, 5%);
     padding: 1rem 0;
     text-align: left;
@@ -688,6 +686,9 @@ a{
         line-height: 1;
         margin: 0.7rem 0;
     }
+}
+.footer__h3{
+    text-align: center;
 }
 .tabs-content{
     @extend .panel;
