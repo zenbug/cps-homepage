@@ -148,9 +148,14 @@ header.grid-x{
             margin: 0;
             padding: 0 5px;
             &:hover{
+                @include default-transition();
                 background: transparent;
                 box-shadow: none;
-                color: $green !important;
+                //color: $green;
+                i {
+                @include default-transition();
+                color: $green;
+                }
             }
             i{
                 color: $dark-blue;
@@ -372,10 +377,13 @@ a{
     }
     &:hover{
         @include default-transition();
-        border: 5px solid rgba($green, 0.3);
-        box-shadow: 0px 10px 40px #cdcdcd;
+        border: 5px solid $green;
+        box-shadow: 0px 10px 40px #bbb;
         background: rgba($cream, 0.5);
         margin-top: 1.5rem;
+        .pillar__img{
+            border-top: 5px rgba($green, 0.3);
+        }
     }
     &:active{
         transform: scale(.99);
