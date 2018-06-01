@@ -258,7 +258,7 @@ a{
     //flex-direction: column;
     align-items: flex-end;
     margin: 0 0 1rem;
-    height: 500px;
+    height: 600px;
     padding: 1rem;
     //overflow: hidden;
     position: relative;
@@ -406,6 +406,9 @@ a{
         border-bottom: 1px solid rgba($light-blue, .3);
         //margin: 0.5rem 0;
         padding: 0.5rem 0;
+        &:last-child{
+            border: 0;
+        }
     }
     &__date{
         color: $light-blue;
@@ -794,7 +797,7 @@ a{
 }
 .position-statements{
     &__browse{
-        margin: 1rem 0;
+        margin: 2rem 0;
         h3{
             margin: 0;
         }
