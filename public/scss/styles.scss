@@ -210,10 +210,12 @@ h3{
     color: rgba($dark-blue, 0.7);
     font-size: 40px;
     margin: 0rem auto 1rem;
+    @include breakpoint(large-range) { font-size: 30px; }
 }
 h3{
     font-size: 30px;
     letter-spacing: 0;
+    @include breakpoint(large-range) { font-size: 25px; }
 }
 h4{
     font-size: 20px;
@@ -396,20 +398,32 @@ a{
 .has-meta{
     list-style-type: none;
     margin: 0;
+    &__meta{
+        display: block;
+        line-height: 1;
+    }
     &__item{
         margin: 1rem 0;
     }
     &__date{
         color: $light-blue;
-        display: block;
+        //display: block;
         font-size: 0.85rem;
         font-weight: 700;
         text-transform: uppercase;
+        &:after{
+            color: darken($gray, 15%);
+            padding-left: 5px;
+            content: " | ";
+        }
     }
     &__category{
-        background: $cream;
-        border: 0;
+        color: rgba($green, .7) !important;
+            color: $light-blue !important;
+        //background: $cream;
+        border: 0 !important;
         border-radius: 4px;
+        //color: $dark-blue;
         font-size: 0.85rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -605,7 +619,7 @@ a{
 }
 .cps-logo{
     background: transparent;
-    border: 0;
+    border: 0 !important;
     display: block;
     margin-top: 1rem;
     width: 170px;
