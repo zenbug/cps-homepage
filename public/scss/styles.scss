@@ -403,7 +403,11 @@ a{
         line-height: 1;
     }
     &__item{
-        margin: 1rem 0;
+        //border-bottom: 1px dotted black;
+        background: rgba($dark-blue, .05);
+        border-radius: $default-radius;
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
     }
     &__date{
         color: $light-blue;
