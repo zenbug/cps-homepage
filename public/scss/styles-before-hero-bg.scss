@@ -251,25 +251,18 @@ a{
     border: 0;
 }
 .hero{
-    background: transparent url('/dist/images/yanapi-senaud-416132-unsplash.jpg') no-repeat center center;
+    background: transparent url('/dist/images/girl-with-flower.jpg') no-repeat center center;
     background-size: cover;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, .5);
-
-    //border-radius: $default-radius 50px 50px $default-radius;
-    //display: flex;
+    border-radius: $default-radius 50px 50px $default-radius;
+    display: flex;
     //flex-direction: column;
-    //align-items: flex-end;
+    align-items: flex-end;
     margin: 0 0 1rem;
-    height: 800px;
+    height: 600px;
     padding: 1rem;
     //overflow: hidden;
     position: relative;
-    &__content{
-        padding: 0 7%;
-        @include breakpoint(large-range) { padding: 0; }
-    }
     &__curve{
-        display: none;
         background: transparent url('/dist/images/hero-curve.png') no-repeat center center;
         background-size: cover;
         height: 100%;
@@ -282,25 +275,21 @@ a{
         @extend h2;
         @include default-text-shadow($green);
         color: white;
-        font-size: 4rem;
-        font-weight: 800;
         text-align: center;
-        @include breakpoint(xlarge-range) { font-size: 3.5rem; }
-        @include breakpoint(large-range) { font-size: 50px; padding: 0rem; }
+        @include breakpoint(large-range) { font-size: 30px; padding: 0rem; }
     }
     &__copy{
         //background: rgba(#000, .5);
-        //background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.3);
             background: rgba($dark-blue, 0.5);
-        //border-radius: $default-radius $default-radius 50px $default-radius;
+        border-radius: $default-radius $default-radius 50px $default-radius;
         //align-self: flex-end;
         //margin: 1rem;
-        padding: 2rem;
+        padding: 1rem;
         @include breakpoint(large-range) { padding: 0.5rem 1rem; }
     }
     &__paragraph{
         color: white;
-        font-size: 1.2em;
         @include breakpoint(large-range) { line-height: 1.4; }
     }
 }
