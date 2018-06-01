@@ -135,9 +135,6 @@ body, p, span{
     font-family: $font-body;
     font-weight: 300;
 }
-a:not(.btn){
-    border-bottom: 1px solid $green;
-}
 header.grid-x{
     margin-top: 0;
 }
@@ -255,7 +252,7 @@ a{
     display: flex;
     //flex-direction: column;
     align-items: flex-end;
-    margin: 0 0 1rem;
+    //margin: 2rem 0 0;
     height: 500px;
     padding: 1rem;
     //overflow: hidden;
@@ -454,7 +451,7 @@ a{
             color: $text-color;
         }
         a{
-            //@include special-link-style($dark-blue);
+            @include special-link-style($dark-blue);
         }
         .nrp__logo{
             border: 0;
@@ -748,7 +745,7 @@ a{
     &-title{
         background: transparent;
         text-align: center;
-        //width: 50% !important;
+        width: 50% !important;
         border-radius: 4px 4px 0 0;
 
         a{
@@ -756,7 +753,7 @@ a{
             border: 0;
             color: rgba($heading-color, .7);
             font-family: $font-heading;
-            font-size: 1rem;
+            font-size: 30px;
             outline: none;
             &:hover{
                 background: transparent;
