@@ -277,6 +277,9 @@ a:not(.btn){
         @extend h2;
         @include default-text-shadow($green);
         color: white;
+        font-size: 50px;
+        font-weight: 800;
+        padding-right: 1rem;
         text-align: center;
         @include breakpoint(large-range) { font-size: 30px; padding: 0rem; }
     }
