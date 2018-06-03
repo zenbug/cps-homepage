@@ -45,8 +45,8 @@ Mixins
 @mixin btn($btn-color){
     background: $btn-color;
     border-radius: $default-radius;
-    border-bottom: 2px solid darken($btn-color, 5%);
-    border-top: 2px solid $btn-color;
+    //border-bottom: 2px solid darken($btn-color, 5%);
+    //border-top: 2px solid $btn-color;
     color: white !important;
     display: inline-block;
     font-size: 0.9rem;
@@ -59,8 +59,8 @@ Mixins
 
     &:hover{
         background: lighten($btn-color, 5%);
-        border-bottom: 2px solid lighten($btn-color, 2%);
-        border-top: 2px solid lighten($btn-color, 7%);
+        //border-bottom: 2px solid lighten($btn-color, 2%);
+        //border-top: 2px solid lighten($btn-color, 7%);
     }
 }
 @mixin special-link-style($special-link-color){
@@ -135,9 +135,6 @@ body, p, span{
     font-family: $font-body;
     font-weight: 300;
 }
-a:not(.btn){
-    border-bottom: 1px solid $green;
-}
 header.grid-x{
     margin-top: 0;
 }
@@ -150,6 +147,9 @@ header.grid-x{
             font-size: 2rem;
             margin: 0;
             padding: 0 2px;
+            i{
+                color: $green !important;
+            }
             &:hover{
                 @include default-transition();
                 background: transparent;
@@ -235,7 +235,9 @@ a{
         color: white;
     }
 }
-
+a:not(.btn){
+    border-bottom: 1px solid $green;
+}
 .grid-x{
     margin-top: 2rem;
     &.no-top-margin{
@@ -251,9 +253,9 @@ a{
     border: 0;
 }
 .hero{
-    background: transparent url('/dist/images/girl-with-flower.jpg') no-repeat center center;
+    background: transparent url('/dist/images/yanapi-senaud-416132-unsplash.jpg') no-repeat center center;
     background-size: cover;
-    border-radius: $default-radius 50px 50px $default-radius;
+    border-radius: $default-radius 75px 75px $default-radius;
     display: flex;
     //flex-direction: column;
     align-items: flex-end;
@@ -493,7 +495,8 @@ a{
 }
 .btn{
     @include default-transition;
-    @include btn($dark-blue);
+    @include btn($green);
+    border-bottom: 0;
     display: inline-block;
     font-size: 0.9rem;
     font-weight: 400;
@@ -505,9 +508,9 @@ a{
     white-space: nowrap;
     &:hover{
         box-shadow: 0px 0px 20px rgba(#000, 0.5);
-        background-color: $green;
-        border-bottom: 2px solid darken($green, 5%);
-        border-top: 2px solid $green;
+        background-color: darken($green, 5%);
+        //border-bottom: 2px solid darken($green, 10%);
+        //border-top: 2px solid darken($green, 5%);
         color: white;
     }
     &:visited{
@@ -588,6 +591,7 @@ a{
         }
         a{
             color: $dark-blue;
+                //color: $green;
             border-bottom: 0px solid white;
             font-size: 1rem;
             margin: 0 2px;
@@ -646,11 +650,11 @@ a{
         padding-left: 1rem;
     }
     .input-group-button .button {
-        background: $dark-blue;
+        background: $green;
         border-radius:  0 $default-radius $default-radius 0;
         font-size: 0.8rem;
         &:hover{
-            background: $green;
+            background: darken($green, 5%);
         }
     }
 }
