@@ -723,9 +723,11 @@ a:not(.btn){
         text-align: left;
         a{
             border: 0;
+            color: $light-blue;
             display: inline-block;
             &:hover{
                 background: transparent;
+                color: $green;
             }
         }
         font-size: 3rem;
