@@ -40,7 +40,7 @@ Mixins
     box-shadow: 0px 1px 2px #888;
 }
 @mixin default-text-shadow($shadow-color){
-    text-shadow: 0 1px 2px darken($shadow-color, 20%);
+    text-shadow: 0 1px 2px darken($shadow-color, 10%);
 }
 @mixin btn($btn-color){
     background: $btn-color;
@@ -54,11 +54,12 @@ Mixins
     letter-spacing: 1px;
     padding: 1rem 2rem;
     text-transform: uppercase;
+    text-shadow: 0 1px 1px darken($btn-color, 5%);
     margin: 5px 0;
     white-space: nowrap;
 
     &:hover{
-        background: lighten($btn-color, 5%);
+        background: darken($btn-color, 5%);
         //border-bottom: 2px solid lighten($btn-color, 2%);
         //border-top: 2px solid lighten($btn-color, 7%);
     }
@@ -186,8 +187,8 @@ h1, h2, h3, h4, h5, h6{
         letter-spacing: -1px;
         font-size: 30px;
         text-align: center;
-        //background: transparent url('/dist/images/glow.png') no-repeat center center;
-        //min-height: 250px;
+        // // background: transparent url('/dist/images/glow.png') no-repeat center center;
+        // // min-height: 250px;
         padding-top: 1rem;
         margin: 1.5rem 0;
         // * The following three Felxbox lines make the tagline break after the comma:
@@ -254,6 +255,7 @@ a:not(.btn){
 }
 .hero{
     background: transparent url('/dist/images/yanapi-senaud-416132-unsplash.jpg') no-repeat center center;
+    background: transparent url('/dist/images/girl-with-flower.jpg') no-repeat center center;
     background-size: cover;
     border-radius: $default-radius 75px 75px $default-radius;
     display: flex;
@@ -505,19 +507,20 @@ a:not(.btn){
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1;
-    margin: 5px 0;
+    margin: 5px 0 0;
     padding: 1rem 2rem;
+    text-shadow: 0 1px 1px darken($green, 5%);
     text-transform: uppercase;
     //text-shadow: 0 -2px 1px darken($green, 10%);
     white-space: nowrap;
+    &:visited{
+        color: white;
+    }
     &:hover{
-        box-shadow: 0px 0px 20px rgba(#000, 0.5);
+        box-shadow: 0px 3px 20px rgba(#000, 0.5);
         background-color: darken($green, 5%);
         //border-bottom: 2px solid darken($green, 10%);
         //border-top: 2px solid darken($green, 5%);
-        color: white;
-    }
-    &:visited{
         color: white;
     }
     &--green{
