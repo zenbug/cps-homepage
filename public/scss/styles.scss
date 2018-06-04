@@ -408,7 +408,7 @@ a:not(.btn){
         line-height: 1;
     }
     &__item{
-        border-bottom: 1px solid rgba($light-blue, .3);
+        border-bottom: 1px solid darken($gray, 7%);
         //margin: 0.5rem 0;
         padding: 0.5rem 0;
         &:last-child{
@@ -504,6 +504,7 @@ a:not(.btn){
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 1px;
+    line-height: 1;
     margin: 5px 0;
     padding: 1rem 2rem;
     text-transform: uppercase;
