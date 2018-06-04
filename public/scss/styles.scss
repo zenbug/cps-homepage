@@ -144,11 +144,11 @@ header.grid-x{
         margin-top: 0px;
         &__item{
             border: 0;
-            font-size: 2rem;
-            margin: 0;
+            font-size: 1.5rem;
+            margin: 7px 5px 0;
             padding: 0 2px;
             i{
-                color: $green !important;
+                //color: $green !important;
             }
             &:hover{
                 @include default-transition();
