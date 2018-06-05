@@ -202,25 +202,55 @@ Pillars
   </div><!-- /.cell medium-4 -->
 </div><!-- /.grid-x -->
 </div><!-- /.grid-container -->
+
+
+
+<style>
+.has-video{
+  /* padding: 4px 0; */
+}
+.has-video h3{
+  color: #fff;
+  font-size: 75px;
+  font-weight: 900;
+}
+.has-video__content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.has-video__copy{
+  max-width: 80%;
+}
+video{
+  /*  border-radius: 0 75px 75px 0; */
+  margin-bottom: -8px;
+  max-width: 100%;
+  max-height: 100%;
+}
+</style>
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Huge NRP
+Video
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<div class="grid-x grid-padding-x nrp has-extra-vertical-space">
-  <div class="cell hide-for-small-only medium-4 large-6 nrp__img">
-  </div>
-  <div class="cell medium-8 large-6 light-blue nrp__content-container">
-  <div class="grid-x grid-padding-x nrp__content">
-    <div class="nrp__copy">
-      <a href="" class="nrp__logo"><img src="/dist/images/logo-nrp.png" alt="" /></a>
-      <h2><a href="">NRP: Neonatal Resuscitation Program</a></h2>
-      <p>The Neonatal Resuscitation Program is an educational program that introduces the concepts and skills of neonatal resuscitation.</p>
-      <p>In Canada, NRP is administered by the Canadian Paediatric Society and is designed to teach individuals and teams who may be required to resuscitate newborn babies. NRP course content is evidence-based and is delivered across Canada in both English and French. Learn more about the <a href="https://www.cps.ca/en/nrp-prn">Neonatal Resuscitation Program</a>.</p>
-    </div>
-    </div>
-  </div>
-</div>
 -->
+<div class="grid-x light-blue has-video has-extra-vertical-space">
+  <div class="cell medium-6">
+    <video autoplay loop>
+      <source src="/dist/images/teens.mov" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+  </div><!-- /.cell -->
+  <div class="cell medium-6 has-video__content">
+    <div class="has-video__copy">
+      <h3>Contraceptive care for Canadian youth</h3>
+      <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
+      <p><a href="#" class="btn">Learn More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+    </div><!-- /.has-video__copy -->
+  </div><!-- /.cell -->
+</div><!-- /.grid-x -->
+
 
 <div class="has-extra-vertical-space news-container">
 <div class="grid-container">
@@ -308,50 +338,6 @@ Huge NRP
 </div><!-- /.light-blue -->
 
 
-<style>
-.has-video{
-  /* padding: 4px 0; */
-}
-.has-video h3{
-  color: #fff;
-  font-size: 75px;
-  font-weight: 900;
-}
-.has-video__content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.has-video__copy{
-  max-width: 80%;
-}
-video{
-  /*  border-radius: 0 75px 75px 0; */
-  max-width: 100%;
-  max-height: 100%;
-}
-</style>
-<!--
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Video
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--->
-<div class="grid-x light-blue has-video">
-  <div class="cell medium-6">
-    <video autoplay loop>
-      <source src="/dist/images/teens.mov" type="video/mp4">
-      <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-    </video>
-  </div><!-- /.cell -->
-  <div class="cell medium-6 has-video__content">
-    <div class="has-video__copy">
-      <h3>Contraceptive care for Canadian youth</h3>
-      <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
-      <p><a href="#" class="btn">Learn More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
-    </div><!-- /.has-video__copy -->
-  </div><!-- /.cell -->
-</div><!-- /.grid-x -->
 
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
