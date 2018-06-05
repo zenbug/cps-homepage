@@ -44,14 +44,14 @@ Header
           </ul><!-- /.social -->
           <ul class="menu menu--secondary__menu">
            <li class="menu__item"><a href="#">français</a></li><!-- /.menu__item -->
-           <li class="menu__item"><a href="#" class="btn header__btn">Member Login</a></li><!-- /.menu__item -->
+           <li class="menu__item"><a href="#" class="1btn 1header__btn">Member Login</a></li><!-- /.menu__item -->
           </ul><!-- /.menu -->
         </div><!-- /.cell -->
         <div class="cell shrink">
           <div class="input-group input-group search">
-          <input class="input-group-field search__keywords" type="search">
+          <input class="input-group-field search__keywords" type="search" placeholder="Search the site">
           <div class="input-group-button">
-          <input type="submit" class="button search__btn" value="Search">
+          <input type="submit" class="button search__btn" value="Go">
           </div><!-- /.input-group-button -->
           </div><!-- /.input-group -->
         </div><!-- /.cell -->
@@ -61,7 +61,7 @@ Header
 
 <div class="grid-x grid-marin-x grid-padding-x no-top-margin">
 <div class="cell medium-12">
-<ul class="menu menu--primary gray">
+<ul class="menu menu--primary gray1">
 <li><a href="#">Policy &amp; Advocacy</a></li>
 <li><a href="#">Clinical Practice</a></li>
 <li><a href="#">Education &amp; Events</a></li>
@@ -83,7 +83,7 @@ Hero
 -->
 <div class="grid-x">
   <div class="grid-container">
-    <div class="grid-x grid-padding-x grid-margin-x no-top-margin">
+    <div class="grid-x grid-padding-x grid-margin-x ">
       <div class="cell large-8">
         <section class="hero">
 
@@ -123,7 +123,7 @@ Hero
             <div class="input-group input-group search">
               <input class="input-group-field search__keywords" type="search" placeholder="Find position statements">
               <div class="input-group-button">
-                <input type="submit" class="button search__btn" value="Search">
+                <input type="submit" class="button search__btn" value="Go">
               </div><!-- /.input-group-button -->
             </div><!-- /.input-group -->
             <div class="position-statements__browse">
@@ -394,6 +394,13 @@ $(".slide-trigger").on("click", function(){
     $(".slide-event").slideToggle();
     return false;
 });
+</script>
+
+<script>
+$("a").hover(
+    function() { $(img).addClass("Hover"); },
+    function() { $(img).removeClass("Hover"); }
+);
 </script>
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Muli:300,400,600,700" rel="stylesheet">
