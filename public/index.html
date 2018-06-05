@@ -302,79 +302,33 @@ Huge NRP
     </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-<style>
-.homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: relative;
-}
-.no-video .video-container video,
-.touch .video-container video {
-    display: none;
-}
-.no-video .video-container .poster,
-.touch .video-container .poster {
-    display: block !important;
-}
-.video-container {
-    position: relative;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: #000;
-}
-.video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-}
-.video-container .filter {
-    z-index: 100;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-}
-.video-container video {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-}
-.video-container video.fillWidth {
-    width: 100%;
-}
-
-</style>
-<div class="homepage-hero-module">
-    <div class="video-container">
-        <div class="filter"></div>
-        <video autoplay loop class="fillWidth">
-            <source src="/dist/images/teens.mov" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="/dist/images/teens.mov" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
-        <div class="poster hidden">
-            <img src="PATH_TO_JPEG" alt="">
-        </div>
-    </div>
-</div>
-
-
-
-
   </div><!-- /.cell medium-12 -->
 </div><!-- /.grid-x grid-margin-x grid-padding-x -->
 </div><!-- /.grid-container -->
 </div><!-- /.light-blue -->
+
+
+<style>
+video{
+  max-width: 100%;
+}
+</style>
+
+<div class="grid-x light-blue">
+  <div class="cell medium-6">
+    <video autoplay>
+      <source src="/dist/images/teens.mov" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+  </div><!-- /.cell -->
+  <div class="cell medium-6">
+    <h3>Contraceptive care for Canadian youth</h3>
+    <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
+  </div><!-- /.cell -->
+</div><!-- /.grid-x -->
+
+
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Footer
