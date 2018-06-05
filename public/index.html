@@ -309,25 +309,49 @@ Huge NRP
 
 
 <style>
+.has-video{
+  /* padding: 4px 0; */
+}
+.has-video h3{
+  color: #fff;
+  font-size: 75px;
+  font-weight: 900;
+}
+.has-video__content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.has-video__copy{
+  max-width: 80%;
+}
 video{
+  /*  border-radius: 0 75px 75px 0; */
   max-width: 100%;
+  max-height: 100%;
 }
 </style>
-
-<div class="grid-x light-blue">
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Video
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<div class="grid-x light-blue has-video">
   <div class="cell medium-6">
-    <video autoplay>
+    <video autoplay loop>
       <source src="/dist/images/teens.mov" type="video/mp4">
       <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
     </video>
   </div><!-- /.cell -->
-  <div class="cell medium-6">
-    <h3>Contraceptive care for Canadian youth</h3>
-    <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
+  <div class="cell medium-6 has-video__content">
+    <div class="has-video__copy">
+      <h3>Contraceptive care for Canadian youth</h3>
+      <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
+      <p><a href="#" class="btn">Learn More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+    </div><!-- /.has-video__copy -->
   </div><!-- /.cell -->
 </div><!-- /.grid-x -->
-
 
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
