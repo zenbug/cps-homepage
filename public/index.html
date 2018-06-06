@@ -206,27 +206,65 @@ Pillars
 
 
 <style>
-.has-video{
-  /* padding: 4px 0; */
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
 }
-.has-video h3{
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+      height: 550px;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+}
+.video-container video.fillWidth {
+    width: 100%;
+    max-width: 100%;
+}
+.video-row{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.video-row__heading{
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1.2;
   color: #fff;
-  font-size: 75px;
-  font-weight: 900;
 }
-.has-video__content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.has-video__copy{
-  max-width: 80%;
-}
-video{
-  /*  border-radius: 0 75px 75px 0; */
-  margin-bottom: -8px;
-  max-width: 100%;
-  max-height: 100%;
+.video-row__copy{
+  padding: 0 15%;
 }
 </style>
 <!--
@@ -234,22 +272,41 @@ video{
 Video
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
-<div class="grid-x light-blue has-video has-extra-vertical-space">
+
+<div class="has-extra-vertical-space">
+<div class="grid-x grid-padding-x grid-margin-x light-blue">
   <div class="cell medium-6">
-    <video autoplay loop>
-      <source src="/dist/images/teens.mov" type="video/mp4">
-      <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-    </video>
+    <div class="homepage-hero-module">
+        <div class="video-container">
+            <div class="filter"></div>
+            <video autoplay loop class="fillWidth light-blue">
+                <source src="/dist/images/teens.mov" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="/dist/images/teens.mov" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="poster hidden">
+                <img src="PATH_TO_JPEG" alt="">
+            </div>
+        </div>
+    </div>
   </div><!-- /.cell -->
-  <div class="cell medium-6 has-video__content">
-    <div class="has-video__copy">
-      <h3>Contraceptive care for Canadian youth</h3>
+  <div class="cell medium-6 video-row">
+    <div class="video-row__copy">
+      <h3 class="video-row__heading">Contraceptive care for Canadian youth</h3>
       <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
-      <p><a href="#" class="btn">Learn More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
-    </div><!-- /.has-video__copy -->
-  </div><!-- /.cell -->
+      <p><a href="#" class="btn">Learn More</a></p>
+    </div><!-- /.video-row__copy -->
+  </div><!-- /.cell medium-6 -->
 </div><!-- /.grid-x -->
+</div><!-- /.has-extra-vertical-space -->
+
+
+
+
+
+
+
+
+
 
 
 <div class="has-extra-vertical-space news-container">
@@ -436,13 +493,6 @@ $(".slide-trigger").on("click", function(){
 </script>
 
 <script>
-$("a").hover(
-    function() { $(img).addClass("Hover"); },
-    function() { $(img).removeClass("Hover"); }
-);
-</script>
-
-<script>
 //jQuery is required to run this code
 $( document ).ready(function() {
 
@@ -465,7 +515,7 @@ function scaleVideoContainer() {
 
     var height = $(window).height() + 5;
     var unitHeight = parseInt(height) + 'px';
-    $('.homepage-hero-module').css('height',unitHeight);
+    //$('.homepage-hero-module').css('height',unitHeight);
 
 }
 
@@ -506,8 +556,8 @@ function scaleBannerVideoSize(element){
 
     });
 }
+</script>
 
- </script>
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Muli:300,400,600,700" rel="stylesheet">
 
 </body>
