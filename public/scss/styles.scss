@@ -235,10 +235,11 @@ a{
         //border-radius: 100rem;
         color: white;
     }
+    &:not(.btn){
+        border-bottom: 1px solid $green;
+    }
 }
-a:not(.btn){
-    border-bottom: 1px solid $green;
-}
+
 .grid-x{
     margin-top: 2rem;
     &.no-top-margin{
@@ -366,7 +367,7 @@ a:not(.btn){
     &--public-policy,
     &--knowledge-translation,
     &--clinical-care{
-        border: 5px solid $gray;
+        border: 5px solid $gray !important;
         border-radius: $default-radius;
         box-shadow: none;
         display: block;
@@ -388,7 +389,7 @@ a:not(.btn){
     }
     &:hover{
         @include default-transition();
-        border: 5px solid $green;
+        border: 5px solid $green !important;
         box-shadow: 0px 10px 40px #bbb;
         background: rgba($cream, 0.5);
         margin-top: 1.5rem;

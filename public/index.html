@@ -31,7 +31,7 @@ Header
     </div><!-- /.cell -->
 
     <div class="cell medium-6 medium-offset-1">
-      <h1 class="tagline">Canada's national organization of paediatricians,<span class="tagline__span">promoting the health needs of children and youth.</span></h1>
+      <h1 class="tagline">The national organization of paediatricians, dedicated to improving the health and well-being of all children and youth in Canada</span></h1>
     </div><!-- /.cell -->
 
     <div class="cell medium-3">
@@ -43,7 +43,7 @@ Header
             <li><a class="social__item" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
           </ul><!-- /.social -->
           <ul class="menu menu--secondary__menu">
-           <li class="menu__item"><a href="#" class="menu__link">français</a></li><!-- /.menu__item -->
+           <li class="menu__item"><a href="#" class="menu__link">Français</a></li><!-- /.menu__item -->
            <li class="menu__item"><a href="#" class="menu__link">Member Login</a></li><!-- /.menu__item -->
           </ul><!-- /.menu -->
         </div><!-- /.cell -->
@@ -171,31 +171,30 @@ Pillars
   <div class="cell">
 
     <div class="pillars__intro">
-      <h2 class="text-center">Our Three Pillars</h2>
-      <p class="text-center">The Canadian Paediatric Society specializes in three key areas of paediatrics:</p>
+      <h2 class="text-center">What We Do</h2>
     </div><!-- /.extra-vertical-space -->
     <!-- Pillars -->
     <div class="grid-x grid-padding-x grid-2" data-equalizer data-equalize-on="medium">
       <div class="cell medium-12 large-4">
-        <div class="panel pillar pillar--public-policy" data-equalizer-watch>
+        <a href="https://www.cps.ca/en/advocacy-defense" class="panel pillar pillar--public-policy" data-equalizer-watch>
           <img src="/dist/images/lecture.png" alt="" class="pillar__img">
           <h3 class="pillar__heading">Public Policy Advocacy</h3>
-          <p>The Canadian Paediatric Society produces information and resources on many child and youth health issues. Throughout this website, you’ll find <a href="/en/documents">position statements</a>, <a href="/en/advocacy-defense">advocacy tools</a>, <a href="http://www.caringforkids.cps.ca" target="_blank">parent education resources</a>, <a href="/en/education">professional development opportunities</a> and much more. In this section, we bring them together into several key focus areas.</p>
-        </div><!-- /.panel -->
+          <p>We advocate to all levels of government for legislation, programs, and policy that help support the health and well-being of children and youth.</p>
+        </a><!-- /.panel -->
       </div><!-- /.cell medium-4 -->
       <div class="cell medium-12 large-4">
-        <div class="panel pillar pillar--knowledge-translation" data-equalizer-watch>
+        <a href="#" class="panel pillar pillar--knowledge-translation" data-equalizer-watch>
           <img src="/dist/images/library.png" alt="" class="pillar__img">
           <h3 class="pillar__heading">Knowledge Translation</h3>
-          <p>Canadian Paediatric Society position statements and practice points have clinical guidance and policy recommendations for paediatricians, family physicians, nurses, government officials and others. They also include links to other relevant documents and resources, including information for parents.</p>
-        </div><!-- /.panel -->
+          <p>To ensure that health professionals, parents and others who care for children and youth are able to make decisions and take action that is based on the best available evidence, we develop programs, tools and resources.</p>
+        </a><!-- /.panel -->
       </div><!-- /.cell medium-4 -->
       <div class="cell medium-12 large-4">
-        <div class="panel pillar pillar--clinical-care" data-equalizer-watch>
+        <a href="https://www.cps.ca/en/first-debut/clinical-practice-tools-and-education" class="panel pillar pillar--clinical-care" data-equalizer-watch>
           <img src="/dist/images/cardiogram.png" alt="" class="pillar__img">
           <h3 class="pillar__heading">Clinical Care</h3>
-          <p>Canadian Paediatric Society position statements and practice points have clinical guidance and policy recommendations for paediatricians, family physicians, nurses, government officials and others. They also include links to other relevant documents and resources, including information for parents.</p>
-        </div><!-- /.panel -->
+          <p>Our position statements, practice points, clinical tools, and educational resources are designed to ensure that paediatricians, family physicians, nurses, and others can deliver the best possible care to children and youth.</p>
+        </a><!-- /.panel -->
       </div><!-- /.cell medium-4 -->
     </div><!-- /.grid-x -->
 
@@ -366,8 +365,9 @@ Footer
           <h4 class="footer__heading">Contact Us</h4>
           <p>2305 St. Laurent Blvd<br>Suite 100<br>Ottawa, ON Canada<br>K1G 4J8</p>
           <p>
-            <span><i class="fa fa-phone" aria-hidden="true"></i> Telephone:</span> <a href="tel:+16135269397">613-526-9397</a> <br>
-            <span><i class="fa fa-fax" aria-hidden="true"></i> Fax:</span> <a href="tel:+16135263332">613-526-3332</a>
+            <span><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;&nbsp;Email:</span> <a href="mailto:info@cps.ca">info@cps.ca</a> <br>
+            <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;Telephone:</span> <a href="tel:+16135269397">613-526-9397</a> <br>
+            <span><i class="fa fa-fax" aria-hidden="true"></i>&nbsp;&nbsp;Fax:</span> <a href="tel:+16135263332">613-526-3332</a>
           </p>
         </div><!-- /.cell -->
 
@@ -377,7 +377,7 @@ Footer
         </div><!-- /.cell medium-4 -->
 
         <div class="cell medium-3 large-2  footer__social">
-          <h4 class="footer__heading">The CPS online</h4>
+          <h4 class="footer__heading">Connect with us</h4>
           <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
           <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
@@ -406,71 +406,6 @@ $(".slide-trigger").on("click", function(){
 });
 </script>
 
-<script>
-//jQuery is required to run this code
-$( document ).ready(function() {
-
-    scaleVideoContainer();
-
-    initBannerVideoSize('.video-container .poster img');
-    initBannerVideoSize('.video-container .filter');
-    initBannerVideoSize('.video-container video');
-
-    $(window).on('resize', function() {
-        scaleVideoContainer();
-        scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
-    });
-
-});
-
-function scaleVideoContainer() {
-
-    var height = $(window).height() + 5;
-    var unitHeight = parseInt(height) + 'px';
-    //$('.homepage-hero-module').css('height',unitHeight);
-
-}
-
-function initBannerVideoSize(element){
-
-    $(element).each(function(){
-        $(this).data('height', $(this).height());
-        $(this).data('width', $(this).width());
-    });
-
-    scaleBannerVideoSize(element);
-
-}
-
-function scaleBannerVideoSize(element){
-
-    var windowWidth = $(window).width(),
-    windowHeight = $(window).height() + 5,
-    videoWidth,
-    videoHeight;
-
-    // console.log(windowHeight);
-
-    $(element).each(function(){
-        var videoAspectRatio = $(this).data('height')/$(this).data('width');
-
-        $(this).width(windowWidth);
-
-        if(windowWidth < 1000){
-            videoHeight = windowHeight;
-            videoWidth = videoHeight / videoAspectRatio;
-            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-
-            $(this).width(videoWidth).height(videoHeight);
-        }
-
-        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-
-    });
-}
-</script>
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Muli:300,400,600,700" rel="stylesheet">
 
