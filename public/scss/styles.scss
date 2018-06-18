@@ -356,13 +356,29 @@ a{
 .pillar{
     @include default-transition();
     display: block;
-    &__img{ // * Circle icons at the top of each pillar
-        border-top: 5px solid $gray;
+    position: relative;
+    &__image-container{
+        @include default-transition();
+        background: #fff;
+        border-top: 5px solid $gray !important;
         border-radius: 100rem;
+        padding: 25px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -70px;
+        margin: 0 auto;
+        width: 148px;
+        @include breakpoint(large-range) { padding: 20px; top: -60px; width: 120px; }
+    }
+    &__img{ // * Circle icons at the top of each pillar
+        //border-top: 5px solid $gray;
         display: block;
-        margin: -110px auto 20px;
-        //padding: 5px;
-        width: 150px;
+        margin: 0 auto;
+
+        //margin: -110px auto 20px;
+        //padding: 20px;
+        //width: 150px;
     }
     &--public-policy,
     &--knowledge-translation,
@@ -372,9 +388,9 @@ a{
         box-shadow: none;
         display: block;
         margin-top: 2rem;
-        //padding: 2rem;
+        padding-top: 100px;
         text-align: center;
-        @include breakpoint(large-range) { padding: 1.5rem; }
+        @include breakpoint(large-range) { padding: 75px 40px 30px; }
         p{
             //font-size: 1rem;
             //line-height: 1.5;
@@ -392,9 +408,14 @@ a{
         border: 5px solid $green !important;
         box-shadow: 0px 10px 40px #bbb;
         background: rgba($cream, 0.5);
+            background: #fdfae9;
         margin-top: 1.5rem;
-        .pillar__img{
-            border-top: 5px rgba($green, 0.3);
+        .pillar__image-container{
+            @include default-transition();
+            background: #fdfae9;
+            border-top: 5px solid $green !important;
+            //border-top: 5px rgba($green, 0.3);
+            //padding: 20px;
         }
     }
     &:active{
