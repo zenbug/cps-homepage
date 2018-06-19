@@ -350,7 +350,22 @@ a{
 }
 .pillars{
     &__intro{
+        //border-bottom: 1px solid $light-blue;
         margin: 5rem 0 5rem;
+    }
+    &__heading {
+        display: table;
+        white-space: nowrap;
+        &:before, &:after {
+            border-top: 1px solid rgba($dark-blue, 0.2);
+          content: '';
+          display: table-cell;
+          position: relative;
+          top: 0.6em;
+          width: 43.5%;
+        }
+        &:before { right: 1.5%; }
+        &:after { left: 1.5%; }
     }
 }
 .pillar{
@@ -740,6 +755,7 @@ a{
 
     }
     &__h3{
+        @include default-text-shadow($dark-blue);
         color: $cream;
         font-size: 50px;
         font-weight: 800;
@@ -749,13 +765,14 @@ a{
         border: 0 !important;
     }
     &__span{
-        border-bottom: 1px solid rgba($gray, 0.1);
-        color: rgba($gray, 0.5);
+        border-bottom: 1px solid rgba($light-blue, 0.3);
+        color: rgba($light-blue, 0.6);
         display: block;
         font-size: 0.7rem;
         letter-spacing: 3px;
         margin-bottom: 5px;
         text-transform: uppercase;
+        text-shadow: none;
     }
     &__paragraph{
         color: $gray;
