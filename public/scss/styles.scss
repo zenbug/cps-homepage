@@ -279,7 +279,7 @@ a{
     &__heading{
         @extend h2;
         @include default-text-shadow($green);
-        color: white;
+        color: #fff;
         font-size: 50px;
         font-weight: 800;
         padding-right: 1rem;
@@ -725,6 +725,41 @@ a{
     //box-shadow: inset 0 3px 3px #bbb;
     //padding: 2rem 0;
     //height: 500px;
+}
+.secondary-hero{
+    align-items: center;
+    background: linear-gradient(to bottom right, rgba($cream, .0), rgba($dark-blue, .50)),
+    url('/dist/images/yanapi-senaud-416132-unsplash.jpg') no-repeat left center;
+    background-size: cover;
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    border-top: 1px solid $gray;
+    box-shadow: 0rem -1px 0rem $light-blue;
+    &__copy{
+
+    }
+    &__h3{
+        color: $cream;
+        font-size: 50px;
+        font-weight: 800;
+    }
+    &__link{
+        color: $cream !important;
+        border: 0 !important;
+    }
+    &__span{
+        border-bottom: 1px solid rgba($gray, 0.1);
+        color: rgba($gray, 0.5);
+        display: block;
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    &__paragraph{
+        color: $gray;
+    }
 }
 .footer{
     font-size: 0.9rem;
