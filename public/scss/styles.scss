@@ -358,6 +358,7 @@ a{
         white-space: nowrap;
         &:before, &:after {
             border-top: 1px solid rgba($dark-blue, 0.2);
+                border-top: 5px solid darken($gray, 1%);
           content: '';
           display: table-cell;
           position: relative;
@@ -376,6 +377,7 @@ a{
         @include default-transition();
         background: #fff;
         border-top: 5px solid $gray !important;
+        border-top: 5px solid rgba($light-blue, 0.4) !important;
         border-radius: 100rem;
         padding: 25px;
         position: absolute;
@@ -399,6 +401,7 @@ a{
     &--knowledge-translation,
     &--clinical-care{
         border: 5px solid $gray !important;
+            border: 5px solid rgba($light-blue, 0.4) !important;
         border-radius: $default-radius;
         box-shadow: none;
         display: block;
@@ -770,7 +773,7 @@ a{
         display: block;
         font-size: 0.7rem;
         letter-spacing: 3px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         text-transform: uppercase;
         text-shadow: none;
     }
