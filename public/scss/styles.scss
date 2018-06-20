@@ -801,22 +801,33 @@ a{
     }
 }
 .journal{
+    max-height: 90%;
+    &__img-link{
+        @include default-transition();
+        display: block;
+        margin-top: -30px;
+        transform: rotate(-4deg) scale(1); /* Firefox 16+, IE 10+, Opera */
+        &:hover{
+            transform: rotate(0deg) scale(1.07); /* Firefox 16+, IE 10+, Opera */
+        }
+    }
     &__img{
-        box-shadow: 0px 5px 20px #888;
-        max-width: 90%;
-        transform: rotate(-3deg) scale(1.2); /* Firefox 16+, IE 10+, Opera */
+        box-shadow: 0px 10px 40px #aaa;
+    }
+    &__h3{
+        font-size: 40px;
+        font-weight: 800;
     }
     &__link{
         //color: $green !important;
         color: rgba($dark-blue, 0.7) !important;
         border: 0 !important;
-        font-weight: 800;
         &:hover{
             background: $light-blue;
         }
     }
     &__span{
-        color: rgba($light-blue, 0.8);
+        color: rgba($light-blue, 1);
         display: block;
         font-size: 0.7rem;
         letter-spacing: 3px;
@@ -826,7 +837,7 @@ a{
         display: table;
         white-space: nowrap;
         &:before, &:after {
-          border-top: 5px solid rgba($light-blue, 0.2);
+          border-top: 5px solid rgba($light-blue, 0.3);
           content: '';
           display: table-cell;
           position: relative;
@@ -835,6 +846,13 @@ a{
         }
         &:before { right: 1.5%; }
         &:after { left: 1.5%; }
+    }
+    &__list-item{
+        margin: 1rem 0;
+        i{
+            color: $light-blue;
+            margin-right: 5px;
+        }
     }
 }
 .footer{
