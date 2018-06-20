@@ -459,6 +459,10 @@ a{
         &:first-child{
             border-top: 0;
         }
+        i{
+            color: $light-blue;
+            margin-right: 5px;
+        }
     }
     &__date{
         color: $light-blue;
