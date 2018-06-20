@@ -805,7 +805,7 @@ a{
     &__img-link{
         @include default-transition();
         display: block;
-        margin-top: -30px;
+        margin-top: -35px;
         transform: rotate(-4deg) scale(1); /* Firefox 16+, IE 10+, Opera */
         &:hover{
             transform: rotate(0deg) scale(1.07); /* Firefox 16+, IE 10+, Opera */
@@ -815,13 +815,15 @@ a{
         box-shadow: 0px 10px 40px #aaa;
     }
     &__h3{
+        color: $light-blue;
         font-size: 40px;
-        font-weight: 800;
+        font-weight: 100;
     }
     &__link{
         //color: $green !important;
         color: rgba($dark-blue, 0.7) !important;
         border: 0 !important;
+        font-weight: 800;
         &:hover{
             background: $light-blue;
         }
@@ -831,7 +833,7 @@ a{
         display: block;
         font-size: 0.7rem;
         letter-spacing: 3px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         text-transform: uppercase;
         text-shadow: none;
         display: table;
