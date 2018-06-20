@@ -808,15 +808,18 @@ a{
     max-height: 90%;
     &__img-link{
         @include default-transition();
+        border: 0 !important;
+        box-shadow: 0px 1px 4px #aaa;
         display: block;
         margin-top: -35px;
         transform: rotate(-4deg) scale(1); /* Firefox 16+, IE 10+, Opera */
         &:hover{
+            box-shadow: 0px 10px 40px #aaa;
             transform: rotate(0deg) scale(1.07); /* Firefox 16+, IE 10+, Opera */
         }
     }
     &__img{
-        box-shadow: 0px 10px 40px #aaa;
+
     }
     &__h3{
         color: $light-blue;
