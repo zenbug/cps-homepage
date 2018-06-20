@@ -215,20 +215,65 @@ Secondary Hero
 Journal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -->
-<div class="journal has-extra-vertical-space">
-  <div class="grid-x grid-padding-x">
-    <div class="cell medium-4">
-      <img src="/dist/images/journal-cover.png" alt="Journal" class="secondary-hero__img">
-    </div><!-- /.cell -->
-    <div class="cell auto">
-      <div class="secondary-hero__copy">
-        <h3 class="">Contraceptive care for Canadian youth</h3>
-        <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
-        <p><a href="#" class="btn">Learn More</a></p>
-      </div><!-- /.secondary-hero__copy -->
-    </div><!-- /.cell medium-6 -->
-  </div><!-- /.grid-x -->
-</div><!-- /.has-extra-vertical-space -->
+<div class="grid-container has-extra-vertical-space">
+
+    <div class="grid-x grid-padding-x grid-margin-x journal">
+
+      <div class="cell medium-8">
+
+          <div class="grid-x grid-padding-x grid-margin-x panel no-top-margin">
+            <div class="cell medium-4">
+              <a href="https://academic.oup.com/pch">
+                <img src="/dist/images/journal-cover.png" alt="Journal" class="journal__img">
+              </a>
+            </div><!-- /.cell medium-4 -->
+            <div class="cell medium-8 journal__copy">
+                <span class="journal__span">Current Issue</span>
+                <h3 class="journal__h3"><a class="journal__link" href="https://academic.oup.com/pch">Paediatrics & Child Health</a></h3>
+                <p>This statement endorses LARCs as the first-line option for contraception for Canadian youth, while emphasizing that providers must collaborate with youth to select a contraceptive method that is acceptable, safe, effective and practical for them.</p>
+                <p><a href="#" class="btn">Learn More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+            </div><!-- /.cell -->
+          </div><!-- /.grid-x -->
+
+      </div><!-- /.cell -->
+
+      <div class="cell medium-4 join-us">
+        <h2>CPS Membership</h2>
+        <p>The CPS is the professional home of more than 3,000 paediatricians, paediatric subspecialists and other child health providers, including family physicians and nurses.</p>
+        <p><a href="#">Join now</a> to help fulfill our mission and enjoy the <a href="#">benefits of membership</a>.</p>
+
+        <div class="button-group-option" data-grouptype="Or">
+          <a href="https://www.cps.ca/en/members-membres" class="button success radius btn">Join us</a>
+          <a href="#" class="button primary radius btn slide-trigger">Log in</a>
+        </div>
+
+        <div class="member-login slide-event panel">
+        <form class="member-login__form">
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x no-top-margin">
+              <div class="medium-12 large-6 cell">
+                <label class="member-login__label">Email
+                  <input type="text" placeholder="Enter your email">
+                </label>
+              </div>
+              <div class="medium-12 large-6 cell">
+                <label class="member-login__label">Password
+                  <input type="text" placeholder="Enter your password">
+                </label>
+              </div>
+              <div class="medium-12 cell">
+                <input type="submit" class="member-login__btn btn button btn--green expanded" value="Log in">
+                <p class="member-login__forgot"><a href="#">Forgot your password?</a></p>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div><!-- /.member-login -->
+
+      </div><!-- /.cell medium-4 -->
+    </div><!-- /.grid-x -->
+
+</div><!-- /.grid-container -->
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Footer
@@ -375,6 +420,35 @@ $(".slide-trigger").on("click", function(){
 });
 </script>
 
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start Smooth Scroll ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+<script>
+$(function(){
+
+	var $window = $(window);		//Window object
+
+	var scrollTime = 0.5;			//Scroll time
+	var scrollDistance = 120;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+
+	$window.on("mousewheel DOMMouseScroll", function(event){
+
+		event.preventDefault();
+
+		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		var scrollTop = $window.scrollTop();
+		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+		TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+				autoKill: true,
+				overwrite: 5
+			});
+	});
+});
+</script>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End Smooth Scroll ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Muli:300,400,600,700" rel="stylesheet">
 
