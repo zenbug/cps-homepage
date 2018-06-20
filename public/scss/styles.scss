@@ -357,8 +357,7 @@ a{
         display: table;
         white-space: nowrap;
         &:before, &:after {
-            border-top: 1px solid rgba($dark-blue, 0.2);
-                border-top: 5px solid darken($gray, 1%);
+          border-top: 5px solid rgba($light-blue, 0.2);
           content: '';
           display: table-cell;
           position: relative;
@@ -377,7 +376,7 @@ a{
         @include default-transition();
         background: #fff;
         border-top: 5px solid $gray !important;
-        border-top: 5px solid rgba($light-blue, 0.4) !important;
+        border-top: 5px solid rgba($light-blue, 0.3) !important;
         border-radius: 100rem;
         padding: 25px;
         position: absolute;
@@ -401,7 +400,7 @@ a{
     &--knowledge-translation,
     &--clinical-care{
         border: 5px solid $gray !important;
-            border: 5px solid rgba($light-blue, 0.4) !important;
+            border: 5px solid rgba($light-blue, 0.2) !important;
         border-radius: $default-radius;
         box-shadow: none;
         display: block;
@@ -746,14 +745,17 @@ a{
 }
 .secondary-hero{
     align-items: center;
-    background: linear-gradient(to bottom right, rgba($cream, .0), rgba($dark-blue, .50)),
-    url('/dist/images/yanapi-senaud-416132-unsplash.jpg') no-repeat left center;
+    background:
+        linear-gradient(to bottom right, rgba($cream, .0), rgba($dark-blue, .50)),
+        url('/dist/images/yanapi-senaud-416132-unsplash.jpg') no-repeat left center;
+
     background-size: cover;
     display: flex;
     height: 600px;
     justify-content: center;
     border-top: 1px solid $gray;
-    box-shadow: 0rem -1px 0rem $light-blue;
+    border-top: 5px solid rgba($dark-blue, 0.1);
+    border-bottom: 5px solid rgba($dark-blue, 0.1);
     &__copy{
 
     }
@@ -766,9 +768,12 @@ a{
     &__link{
         color: $cream !important;
         border: 0 !important;
+        &:hover{
+            background: $light-blue;
+        }
     }
     &__span{
-        border-bottom: 1px solid rgba($light-blue, 0.3);
+        //border-bottom: 1px solid rgba($light-blue, 0.3);
         color: rgba($light-blue, 0.6);
         display: block;
         font-size: 0.7rem;
@@ -776,6 +781,19 @@ a{
         margin-bottom: 10px;
         text-transform: uppercase;
         text-shadow: none;
+
+        display: table;
+        white-space: nowrap;
+        &:before, &:after {
+          border-top: 1px solid rgba($light-blue, 0.2);
+          content: '';
+          display: table-cell;
+          position: relative;
+          top: 0.7em;
+          width: 35.2%;
+        }
+        &:before { right: 1.5%; }
+        &:after { left: 1.5%; }
     }
     &__paragraph{
         color: $gray;
