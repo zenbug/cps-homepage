@@ -284,7 +284,7 @@ a{
         font-weight: 800;
         padding-right: 1rem;
         text-align: center;
-        @include breakpoint(large-range) { font-size: 30px; padding: 0rem; }
+        @include breakpoint(large-range) { font-size: 40px; padding: 0rem; }
     }
     &__copy{
         //background: rgba(#000, .5);
@@ -811,6 +811,7 @@ a{
 
         display: table;
         white-space: nowrap;
+        @include breakpoint(medium-range) { color: $gray; }
         &:before, &:after {
           border-top: 5px solid rgba($light-blue, 0.1);
           content: '';
@@ -818,6 +819,7 @@ a{
           position: relative;
           top: 0.5em;
           width: 35.2%;
+          @include breakpoint(medium-range) { border-top: 5px solid rgba($gray, 0.3); }
         }
         &:before { right: 1.5%; }
         &:after { left: 1.5%; }
