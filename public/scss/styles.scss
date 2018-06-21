@@ -663,6 +663,31 @@ a{
         }
     }
 }
+.is-dropdown-submenu{
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    min-width: 300px;
+    overflow: hidden;
+    li{
+        a{
+            border-bottom: 1px solid darken($gray, 10%);
+            border-radius: 0;
+            margin: 0;
+        }
+        &:last-child{
+            border: 0 !important;
+        }
+    }
+}
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after{
+    display: none;
+}
+.dropdown.menu .is-active>a{
+    background: $green;
+    color: $gray;
+}
 /*
 .cell__2{
     background: transparent url('/dist/images/beatriz-perez-moya-111685-unsplash.jpg') no-repeat 0 0;
