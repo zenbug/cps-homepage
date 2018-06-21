@@ -43,6 +43,7 @@ Mixins
     text-shadow: 0 1px 2px darken($shadow-color, 10%);
 }
 @mixin btn($btn-color){
+    @include default-transition();
     background: $btn-color;
     border-radius: $default-radius;
     //border-bottom: 2px solid darken($btn-color, 5%);
@@ -59,6 +60,7 @@ Mixins
     white-space: nowrap;
 
     &:hover{
+        @include default-transition();
         background: darken($btn-color, 5%);
         //border-bottom: 2px solid lighten($btn-color, 2%);
         //border-top: 2px solid lighten($btn-color, 7%);
@@ -681,9 +683,14 @@ a{
         }
     }
 }
-.dropdown.menu>li.is-dropdown-submenu-parent>a::after{
-    display: none;
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a{
+    padding-right: 1rem;
+    &::after{
+        display: none;
+    }
 }
+
 .dropdown.menu .is-active>a{
     background: $green;
     color: $gray;
@@ -1026,6 +1033,7 @@ a{
 }
 .join-us{
     margin-top: 2rem;
+    position: relative;
 }
 // Either/Or button group (https://foundation.zurb.com/building-blocks/blocks/button-group-option.html):
 $button-group-option-font-size: 1rem; // controls size of circle and text of option
@@ -1044,7 +1052,7 @@ $button-group-option-button-fontsize: 1rem; // controls size of button and text 
     background: $green;
     border: 0;
     &:hover{
-        background: $green;
+        background: darken($green, 5%);
     }
   }
 
@@ -1072,6 +1080,8 @@ $button-group-option-button-fontsize: 1rem; // controls size of button and text 
     font-family: $font-body;
     margin-top: -1rem;
     padding: 1rem;
+    position: absolute;
+    z-index: 1;
     &__label{
         font-size: 1rem;
     }
