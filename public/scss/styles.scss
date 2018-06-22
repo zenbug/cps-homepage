@@ -74,7 +74,9 @@ Mixins
         color: white;
     }
 }
-
+@mixin img-effect{
+    box-shadow: 0px 1px 4px #aaa;
+}
 // Here we define the lower and upper bounds for each media size, only used as reference (from Zurb Foundation documentation):
 $small-range: (0em, 40em); /* 0, 640px */
 $medium-range: (40.063em, 64em); /* 641px, 1024px */
@@ -988,10 +990,25 @@ a{
     &__item{
         overflow: hidden;
     }
+    &__meta{
+        margin: 0;
+    }
     &__img{
+    }
+    &__img-link{
+        @include img-effect();
+        border: 5px solid #fff;
+        border: 5px solid #fff;
         float: left;
-        margin: 0 1.5rem 0 0;
-        width: 100px;
+        margin: 0 1.5rem 1rem 0;
+        width: 120px;
+    }
+    &__copy{
+
+    }
+    &__paragraph{
+        font-size: 1rem;
+        line-height: 1.4;
     }
 }
 .tabs-content{
