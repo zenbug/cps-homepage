@@ -139,6 +139,7 @@ body, p, span{
         line-height: 1.7;
     font-family: $font-body;
     font-weight: 300;
+    @include breakpoint(small-range) { font-size: 1rem; }
 }
 header.grid-x{
     margin-top: 0;
@@ -195,13 +196,13 @@ h1, h2, h3, h4, h5, h6{
         // // min-height: 250px;
         padding-top: 1rem;
         margin: 1.5rem 0;
-        // * The following three Felxbox lines make the tagline break after the comma:
+        // * The following three Flexbox lines make the tagline break after the comma:
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include breakpoint(small-range){font-size: 20px;}
-        @include breakpoint(medium-range){font-size: 30px;}
         @include breakpoint(large-range){font-size: 20px;}
+        @include breakpoint(medium-range){font-size: 30px;}
+        @include breakpoint(small-range){font-size: 10px; padding: 0; }
         &__span{
             color: inherit;
             font-family: inherit;
@@ -253,6 +254,7 @@ a{
 .has-extra-vertical-space{
     //margin-bottom: 7rem;
     margin-top: 7rem;
+    @include breakpoint(small-range) { margin-top: 2rem;  }
 }
 .tabs,
 .tabs-content{
@@ -271,6 +273,7 @@ a{
     padding: 1rem;
     //overflow: hidden;
     position: relative;
+    @include breakpoint(small-range){ border-radius: 4px; height: auto; padding: 1rem; }
    &__curve{
         background: transparent url('/dist/images/hero-curve.png') no-repeat center center;
         background-size: cover;
@@ -279,6 +282,7 @@ a{
         position: absolute;
         top: 0px;
         width: 265px;
+        @include breakpoint(small-range){ display: none; }
     }
     &__heading{
         @extend h2;
@@ -289,6 +293,7 @@ a{
         padding-right: 1rem;
         text-align: center;
         @include breakpoint(large-range) { font-size: 40px; padding: 0rem; }
+        @include breakpoint(small-range){ font-size: 25px; font-weight: 100; }
     }
     &__copy{
         //background: rgba(#000, .5);
@@ -299,10 +304,12 @@ a{
         //margin: 1rem;
         padding: 1rem;
         @include breakpoint(large-range) { padding: 0.5rem 1rem; }
+        @include breakpoint(small-range){ border-radius: 4px;  }
     }
     &__paragraph{
         color: white;
         @include breakpoint(large-range) { line-height: 1.4; }
+        @include breakpoint(small-range){ font-size: 16px; }
     }
 }
 .panel{
@@ -312,6 +319,8 @@ a{
     box-shadow: 0px 2px 10px #ddd;
     padding: 2.5rem;
     //margin: 1rem 0;
+    @include breakpoint(medium-range){ padding: 1rem 0rem; }
+    @include breakpoint(small-range){ padding: 1rem 0rem; }
     &--no-gutters{
         padding: 0;
         margin: 0;
@@ -356,6 +365,7 @@ a{
     &__intro{
         //border-bottom: 1px solid $light-blue;
         margin: 5rem 0 5rem;
+        @include breakpoint(small-range) { margin: 0; }
     }
     &__heading {
         display: table;
@@ -390,6 +400,7 @@ a{
         margin: 0 auto;
         width: 148px;
         @include breakpoint(large-range) { padding: 20px; top: -60px; width: 120px; }
+        @include breakpoint(small-range){ width: 75px; padding: 15px; top: -30px; }
     }
     &__img{ // * Circle icons at the top of each pillar
         //border-top: 5px solid $gray;
@@ -412,17 +423,20 @@ a{
         padding-top: 100px;
         text-align: center;
         @include breakpoint(large-range) { padding: 75px 40px 30px; }
+        @include breakpoint(small-range){ padding: 3rem 1rem 1rem; }
         p{
             //font-size: 1rem;
             //line-height: 1.5;
             text-align: justify;
             @include breakpoint(large-range) { line-height: 1.5; text-align: left; }
+            @include breakpoint(small-range){ font-size: 1rem; }
         }
     }
     &__heading{
         //color: $green;
         font-size: 1.5rem;
         margin-bottom: 2rem;
+        @include breakpoint(small-range){ font-size: 1.2rem; margin-bottom: 1rem;}
     }
     &:hover{
         @include default-transition();
@@ -431,6 +445,7 @@ a{
         background: rgba($cream, 0.5);
             background: #fdfae9;
         margin-top: 1.5rem;
+        @include breakpoint(medium-range){ margin-top: 2rem; }
         .pillar__image-container{
             @include default-transition();
             background: #fdfae9;
@@ -724,6 +739,7 @@ a{
     display: block;
     margin-top: 1rem;
     width: 170px;
+    @include breakpoint(small-range){ width: 75px; }
     &:hover{
         background: transparent;
     }
@@ -792,6 +808,7 @@ a{
     justify-content: center;
     //border-top: 5px solid rgba($dark-blue, 0.1);
     //border-bottom: 5px solid rgba($dark-blue, 0.1);
+    @include breakpoint(small-range){ height: auto; }
     &__copy{
 
     }
@@ -800,6 +817,7 @@ a{
         color: $cream;
         font-size: 50px;
         font-weight: 800;
+        @include breakpoint(small-range){ font-size: 25px; font-weight: 100; }
     }
     &__link{
         color: $cream !important;
@@ -835,6 +853,7 @@ a{
     }
     &__paragraph{
         color: $gray;
+        @include breakpoint(small-range){ font-size: 1rem; }
     }
     &__img{
 
@@ -849,6 +868,8 @@ a{
         display: block;
         margin-top: -35px;
         transform: rotate(-4deg) scale(1); /* Firefox 16+, IE 10+, Opera */
+        @include breakpoint(medium-range){ width: 200px; margin: -20px auto 0; }
+        @include breakpoint(small-range){ width: 250px; margin: -20px auto 0; }
         &:hover{
             box-shadow: 0px 10px 40px #aaa;
             transform: rotate(0deg) scale(1.07); /* Firefox 16+, IE 10+, Opera */
@@ -861,15 +882,22 @@ a{
         color: $light-blue;
         font-size: 40px;
         font-weight: 100;
+        @include breakpoint(medium-range){ font-size: 25px; font-weight: 100; }
+        @include breakpoint(small-range){ font-size: 25px; font-weight: 100; }
     }
     &__link{
         //color: $green !important;
         color: rgba($dark-blue, 0.7) !important;
         border: 0 !important;
         font-weight: 800;
+        @include breakpoint(small-range){ font-weight: 100; }
         &:hover{
             background: $light-blue;
         }
+    }
+    &__copy{
+        @include breakpoint(medium-range){ margin-top: 1rem; }
+        @include breakpoint(small-range){ margin-top: 2rem; }
     }
     &__span{
         color: rgba($light-blue, 1);
@@ -987,9 +1015,11 @@ a{
     text-align: center;
 }
 .next-to-hero{
+    @include breakpoint(small-range) { font-size: 1rem; }
 
 }
 .events{
+    @include breakpoint(small-range){ margin-top: 1rem; }
     &__item{
         overflow: hidden;
     }
@@ -1113,6 +1143,7 @@ $button-group-option-button-fontsize: 1rem; // controls size of button and text 
     padding: 1rem;
     position: absolute;
     z-index: 1;
+    @include breakpoint(small-range) { position: relative; }
     &__label{
         font-size: 1rem;
     }
