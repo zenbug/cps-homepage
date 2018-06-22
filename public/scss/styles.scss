@@ -839,7 +839,7 @@ a{
     }
 }
 .journal{
-    max-height: 90%;
+    //max-height: 90%;
     &__img-link{
         @include default-transition();
         border: 0 !important;
@@ -995,15 +995,16 @@ a{
     &-title{
         background: transparent;
         text-align: center;
-        //width: 50% !important;
+        width: 50% !important;
         border-radius: 4px 4px 0 0;
-
         a{
             background: transparent;
             border: 0;
             color: rgba($heading-color, .7);
+            color: rgba($dark-blue, 0.4);
             font-family: $font-heading;
             font-size: 1rem;
+                font-size: 40px;
             outline: none;
             &:hover{
                 background: transparent;
@@ -1032,7 +1033,7 @@ a{
     }
 }
 .join-us{
-    margin-top: 2rem;
+    //margin-top: 2rem;
     position: relative;
 }
 // Either/Or button group (https://foundation.zurb.com/building-blocks/blocks/button-group-option.html):

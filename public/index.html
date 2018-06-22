@@ -296,7 +296,7 @@ Journal
 
     <div class="grid-x grid-padding-x grid-margin-x">
 
-      <div class="cell medium-8">
+      <div class="cell medium-6">
           <div class="grid-x grid-padding-x grid-margin-x panel no-top-margin journal">
             <div class="cell large-12">
               <h3 class="journal__h3">Journal: <a class="journal__link" href="https://academic.oup.com/pch">Paediatrics & Child Health</a></h3>
@@ -320,9 +320,33 @@ Journal
           </div><!-- /.grid-x -->
       </div><!-- /.cell -->
 
-      <div class="cell medium-4 join-us">
+      <div class="cell medium-6 join-us">
 
-<h3>News/Events here?</h3>
+        <ul class="tabs" data-tabs id="example-tabs">
+          <li class="tabs-title is-active"><a href="#panel1">News</a></li>
+          <li class="tabs-title"><a href="#panel2" aria-selected="true">Events</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel is-active tabs-content__panel position-statements" id="panel1">
+            <div class="">
+              <p>Filter by <a href="" class="has-meta__category">Authoring Group</a>, <a href="" class="has-meta__category">Date</a>, or <a href="" class="has-meta__category">Topic</a></p>
+              <ul class="tabs-content__list events has-meta">
+                <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Immunization of the immunocompromised child: Key principles</a></li>
+                <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Managing infants born to mothers who have used opioids during pregnancy</a></li>
+                <li class="has-meta__item"><span class="has-meta__date">May 11 2018</span><a href="#">Decision-making around gastrostomy tube feeding in children with neurologic impairment: Engaging effectively with families</a></li>
+              </ul>
+              <p class="text-right"><a href="#" class="button btn">More news <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+            </div><!-- /.browse -->
+          </div><!-- /.tabs-panel -->
+          <div class="tabs-panel" id="panel2">
+            <ul class="tabs-content__list events has-meta">
+              <li class="has-meta__item"><span class="has-meta__date">May 30 to June 2, 2018</span><a href="">CPS 95th Annual Conference (Quebec City)</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">October 19 to 21, 2018</span><a href="">CPS Lifelong Learning in Paediatrics (LLP) in Banff</a></li>
+              <li class="has-meta__item"><span class="has-meta__date">March 22 to 24, 2019</span><a href="">The 8th International Meeting on Indigenous Child Health (Calgary)</a></li>
+            </ul>
+            <p class="text-right"><a href="#" class="button btn">More events <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+          </div><!-- /.tabs-panel -->
+        </div><!-- /.tabs-content -->
 
       </div><!-- /.cell medium-4 -->
     </div><!-- /.grid-x -->
