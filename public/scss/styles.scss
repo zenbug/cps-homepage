@@ -468,7 +468,7 @@ a{
     }
     &__date{
         color: $light-blue;
-        //display: block;
+        display: block;
         font-size: 0.85rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -983,6 +983,16 @@ a{
 }
 .footer__h3{
     text-align: center;
+}
+.events{
+    &__item{
+        overflow: hidden;
+    }
+    &__img{
+        float: left;
+        margin: 0 1.5rem 0 0;
+        width: 100px;
+    }
 }
 .tabs-content{
     @extend .panel;
