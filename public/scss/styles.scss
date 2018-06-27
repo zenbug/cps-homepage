@@ -490,9 +490,9 @@ a{
         font-weight: 700;
         text-transform: uppercase;
         &:after{
-            color: darken($gray, 15%);
-            padding-left: 5px;
-            content: " | ";
+            //color: darken($gray, 15%);
+            //padding-left: 5px;
+            //content: " | ";
         }
     }
     &__category{
@@ -1030,10 +1030,9 @@ a{
     }
     &__img-link{
         @include img-effect();
-        border: 5px solid #fff;
-        border: 5px solid #fff;
+        border: 0px solid #fff !important;
         float: left;
-        margin: 0 1.5rem 1rem 0;
+        margin: 7px 24px 16px 0;
         width: 120px;
     }
     &__copy{
