@@ -309,6 +309,7 @@ a{
         padding-right: 1rem;
         text-align: center;
         @include breakpoint(large-range) { font-size: 40px; padding: 0rem; }
+        @include breakpoint(medium-range) { font-size: 30px; font-weight: 600; }
         @include breakpoint(small-range){ font-size: 25px; font-weight: 100; }
     }
     &__link{
@@ -444,13 +445,13 @@ a{
         margin-top: 2rem;
         padding-top: 100px;
         text-align: center;
-        @include breakpoint(large-range) { padding: 75px 40px 30px; }
+        @include breakpoint(large-range) { padding: 75px 30px 20px; }
         @include breakpoint(small-range){ padding: 3rem 1rem 1rem; }
         p{
             //font-size: 1rem;
             //line-height: 1.5;
             text-align: justify;
-            @include breakpoint(large-range) { line-height: 1.5; text-align: left; }
+            @include breakpoint(large-range) { line-height: 1.5; text-align: left; font-size: 1.1rem; }
             @include breakpoint(small-range){ font-size: 1rem; }
         }
     }
@@ -467,7 +468,7 @@ a{
         background: rgba($cream, 0.5);
             background: #fdfae9;
         margin-top: 1.5rem;
-        @include breakpoint(medium-range){ margin-top: 2rem; }
+        @include breakpoint(medium-range){ margin-top: 2rem; z-index: 1;}
         .pillar__image-container{
             @include default-transition();
             background: #fdfae9;
@@ -849,6 +850,8 @@ a{
         color: $cream;
         font-size: 50px;
         font-weight: 800;
+        @include breakpoint(large-range){ font-size: 40px; }
+        @include breakpoint(medium-range){ font-size: 30px; font-weight: 600; }
         @include breakpoint(small-range){ font-size: 25px; font-weight: 100; }
     }
     &__link{
@@ -884,6 +887,7 @@ a{
     }
     &__paragraph{
         color: $gray;
+        @include breakpoint(large-range){ line-height: 1.4; }
         @include breakpoint(small-range){ font-size: 1rem; }
     }
     &__img{
@@ -1070,7 +1074,7 @@ a{
 }
 .next-to-hero{
     @include breakpoint(large-range) { font-size: 1rem; }
-    @include breakpoint(medium-range) { font-size: inherit; }
+    @include breakpoint(medium-range) { font-size: inherit; margin-top: 2rem;}
     @include breakpoint(small-range) { font-size: 1rem; }
     &__h2{
         @include breakpoint(large-range) { font-size: 1.5rem; }
