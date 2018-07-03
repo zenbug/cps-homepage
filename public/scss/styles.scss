@@ -22,6 +22,8 @@ $heading-color: $dark-blue;
 $link-on-dark-color: lighten($green, 15%);
 
 $default-radius: 4px;
+$medium-radius: 10px;
+$large-radius: 75px;
 $default-font-size: 18px;
 
 /*
@@ -274,7 +276,7 @@ a{
     //background: transparent url('/dist/images/danielle-macinnes-51591-unsplash.jpg') no-repeat center center;
     //background: transparent url('/dist/images/mi-pham-223464-unsplash.jpg') no-repeat center center;
     background-size: cover;
-    border-radius: $default-radius 75px 75px $default-radius;
+    border-radius: $default-radius $large-radius $large-radius $default-radius;
     display: flex;
     //flex-direction: column;
     align-items: flex-end;
@@ -283,9 +285,9 @@ a{
     padding: 1rem;
     //overflow: hidden;
     position: relative;
-    @include breakpoint(large-range){ border-radius: 25px; }
-    @include breakpoint(medium-range){ border-radius: 4px; height: auto; padding: 1rem; }
-    @include breakpoint(small-range){ border-radius: 4px; height: auto; padding: 1rem; }
+    @include breakpoint(large-range){ border-radius: $medium-radius; }
+    @include breakpoint(medium-range){ border-radius: $medium-radius; height: auto; padding: 1rem; }
+    @include breakpoint(small-range){ border-radius: $default-radius; height: auto; padding: 1rem; }
    &__curve{
         background: transparent url('/dist/images/hero-curve.png') no-repeat center center;
         background-size: cover;
@@ -320,12 +322,11 @@ a{
         //background: rgba(#000, .5);
         background: rgba(0, 0, 0, 0.3);
             background: rgba($dark-blue, 0.5);
-        border-radius: $default-radius $default-radius 75px $default-radius;
-        //align-self: flex-end;
-        //margin: 1rem;
+        border-radius: $default-radius $default-radius $large-radius $default-radius;
         padding: 1rem;
-        @include breakpoint(large-range) { padding: 0.5rem 1rem; }
-        @include breakpoint(small-range){ border-radius: 4px;  }
+        @include breakpoint(large-range) { border-radius: $default-radius $default-radius $medium-radius $default-radius; padding: 0.5rem 1rem; }
+        @include breakpoint(medium-range){ border-radius: $default-radius $default-radius $medium-radius $default-radius; }
+        @include breakpoint(small-range){ border-radius: $default-radius;  }
     }
     &__paragraph{
         color: white;
@@ -336,7 +337,7 @@ a{
 .panel{
     background-color: white;
     //border-top: 10px solid lighten($light-blue, 15%);
-    border-radius: 4px;
+    border-radius: $default-radius;
     box-shadow: 0px 2px 10px #ddd;
     padding: 2.5rem;
     //margin: 1rem 0;
@@ -521,7 +522,7 @@ a{
             color: $light-blue !important;
         //background: $cream;
         border: 0 !important;
-        border-radius: 4px;
+        border-radius: $default-radius;
         //color: $dark-blue;
         font-size: 0.85rem;
         font-weight: 700;
@@ -707,7 +708,7 @@ a{
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
     background: transparent;
     border: 0;
-    border-radius: 4px;
+    border-radius: $default-radius;
     min-width: 300px;
     overflow: hidden;
     li{
@@ -1103,7 +1104,7 @@ a{
 }
 .tabs-content{
     @extend .panel;
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 $default-radius $default-radius;
     margin-bottom: 2rem;
 }
 // This rule doesn't use the BEM syntax because I'm tageting Foundation's tabs to override their default styles:
@@ -1113,7 +1114,7 @@ a{
         background: transparent;
         text-align: center;
         width: 50% !important;
-        border-radius: 4px 4px 0 0;
+        border-radius: $default-radius $default-radius 0 0;
         a{
             background: transparent;
             border: 0;
@@ -1133,7 +1134,7 @@ a{
         &.is-active{
             a{
                 background: white;
-                border-radius: 4px 4px 0 0;
+                border-radius: $default-radius $default-radius 0 0;
                 box-shadow: 0px -3px 5px #eee;
                 color: rgba($dark-blue, 0.7);
             }
