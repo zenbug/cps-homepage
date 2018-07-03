@@ -98,7 +98,9 @@ Based on this: http://css-tricks.com/media-queries-sass-3-2-and-codekit/
 		@media (max-width: 90em) { @content; }
 	}
 	@else if $point == medium-range {
-		@media (max-width: 60em)  { @content; }
+        @media (max-width: 60em)  { @content; }
+        // * This is to match Foundation's medium range:
+        @media (max-width: 1023px)  { @content; }
 	}
 	@else if $point == small-range {
 		@media (max-width: 40em)  { @content; }
@@ -187,7 +189,8 @@ h1, h2, h3, h4, h5, h6{
 }
 .tagline{
         // * Make the tagline drop below the logo and secondary nav on smaller screens:
-        // @include breakpoint(medium-range){order: 1; }
+        order: 0;
+        @include breakpoint(medium-range){order: 1; }
         &__h1{
             color: $heading-color;
             font-family: $font-heading;
@@ -754,6 +757,7 @@ a{
     display: block;
     margin-top: 1rem;
     width: 170px;
+    @include breakpoint(medium-range){ width: 120px; }
     @include breakpoint(small-range){ width: 75px; }
     &:hover{
         background: transparent;
