@@ -283,6 +283,8 @@ a{
     padding: 1rem;
     //overflow: hidden;
     position: relative;
+    @include breakpoint(large-range){ border-radius: 25px; }
+    @include breakpoint(medium-range){ border-radius: 4px; height: auto; padding: 1rem; }
     @include breakpoint(small-range){ border-radius: 4px; height: auto; padding: 1rem; }
    &__curve{
         background: transparent url('/dist/images/hero-curve.png') no-repeat center center;
@@ -292,6 +294,8 @@ a{
         position: absolute;
         top: 0px;
         width: 265px;
+        @include breakpoint(large-range){ display: none;}
+        @include breakpoint(medium-range){ display: block; }
         @include breakpoint(small-range){ display: none; }
     }
     &__heading{
@@ -1064,8 +1068,13 @@ a{
     text-align: center;
 }
 .next-to-hero{
+    @include breakpoint(large-range) { font-size: 1rem; }
+    @include breakpoint(medium-range) { font-size: inherit; }
     @include breakpoint(small-range) { font-size: 1rem; }
-
+    &__h2{
+        @include breakpoint(large-range) { font-size: 1.5rem; }
+        @include breakpoint(medium-range) { font-size: 2rem; }
+    }
 }
 .events{
     @include breakpoint(small-range){ margin-top: 1rem; }
@@ -1143,6 +1152,14 @@ a{
 .join-us{
     margin-top: 2rem;
     position: relative;
+    &__h2{
+        @include breakpoint(large-range) { font-size: 1.5rem; }
+        @include breakpoint(medium-range) { font-size: 2rem; }
+    }
+    p{
+        @include breakpoint(large-range) { font-size: 1rem; line-height: 1.4;}
+        @include breakpoint(medium-range) { font-size: inherit; line-height: inherit;}
+    }
 }
 // Either/Or button group (https://foundation.zurb.com/building-blocks/blocks/button-group-option.html):
 $button-group-option-font-size: 1rem; // controls size of circle and text of option
@@ -1191,6 +1208,7 @@ $button-group-option-button-fontsize: 1rem; // controls size of button and text 
     padding: 1rem;
     position: absolute;
     z-index: 1;
+    @include breakpoint(medium-range) { width: 100%; }
     @include breakpoint(small-range) { position: relative; }
     &__label{
         font-size: 1rem;
