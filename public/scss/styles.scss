@@ -77,7 +77,9 @@ Mixins
     }
 }
 @mixin img-effect{
-    box-shadow: 0px 1px 4px #aaa;
+    border: 0px solid $gray !important;
+    border-radius: $default-radius;
+    box-shadow: none;
 }
 // Here we define the lower and upper bounds for each media size, only used as reference (from Zurb Foundation documentation):
 $small-range: (0em, 40em); /* 0, 640px */
@@ -841,7 +843,8 @@ a{
     justify-content: center;
     //border-top: 5px solid rgba($dark-blue, 0.1);
     //border-bottom: 5px solid rgba($dark-blue, 0.1);
-    @include breakpoint(small-range){ height: auto; }
+    @include breakpoint(medium-range){ height: auto; }
+    @include breakpoint(small-range){ margin: 5rem 0; }
     &__copy{
 
     }
@@ -1093,9 +1096,9 @@ a{
     }
     &__img-link{
         @include img-effect();
-        border: 0px solid #fff !important;
         float: left;
         margin: 7px 24px 16px 0;
+        overflow: hidden;
         width: 120px;
     }
     &__copy{
