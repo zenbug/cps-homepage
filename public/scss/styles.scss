@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6{
             align-items: center;
             @include breakpoint(large-range){font-size: 20px;}
             @include breakpoint(medium-range){font-size: 20px;}
-            @include breakpoint(small-range){font-size: 10px; padding: 0; }
+            @include breakpoint(small-range){font-size: 1rem; padding: 0; margin: 1.5rem 0 0; }
         }
         &__span{
             color: inherit;
@@ -687,6 +687,7 @@ a{
     justify-content: center;
     li{
         border-right: 1px solid rgba($dark-blue, .1);
+        padding: 5px;
         //margin: 0 0 0 0.5rem;
         &:last-child{
             border: 0;
@@ -833,8 +834,10 @@ a{
     border: 0;
     border-radius: $default-radius;
     min-width: 300px;
+    margin: 0px 0 0 6px;
     overflow: hidden;
     li{
+        padding: 0 0px;
         a{
             border-bottom: 1px solid darken($gray, 10%);
             border-radius: 0;
@@ -857,10 +860,6 @@ a{
 .dropdown.menu .is-active>a{
     background: $green;
     color: $gray;
-}
-#primary{
-    display: block;
-    @include breakpoint(medium-range) { display: none; }
 }
 .menu-trigger{
     display: none;
@@ -895,9 +894,12 @@ a{
 }
 .menu--secondary{
     justify-content: flex-end;
-    margin-top: 0;
+    margin-top: -5px;
     &__menu{
         margin: 0;
+    }
+    .menu__item{
+        padding: 0;
     }
     .menu__link{
         border-radius: 0 0 $default-radius $default-radius;
