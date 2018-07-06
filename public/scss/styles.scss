@@ -192,10 +192,31 @@ h1, h2, h3, h4, h5, h6{
     //font-size: 46px;
     line-height: 1.2;
 }
+
+@media screen and (max-width: 1320px) {
+    #primary,
+    .menu--secondary__menu,
+    .off-canvas-content .menu.social,
+    .search {
+      display: none;
+    }
+    .tagline__h1{
+        margin: 1rem;
+    }
+    #hamburger-icon{
+        display: block !important;
+    }
+  }
+  @media screen and (min-width: 1320px) {
+    #hamburger-icon{
+        display: none !important;
+    }
+  }
+
 .tagline{
         // * Make the tagline drop below the logo and secondary nav on smaller screens:
         order: 0;
-        @include breakpoint(medium-range){order: 1; }
+        @include breakpoint(small-range){order: 1; }
         &__h1{
             color: $heading-color;
             font-family: $font-heading;
@@ -212,7 +233,7 @@ h1, h2, h3, h4, h5, h6{
             flex-direction: column;
             align-items: center;
             @include breakpoint(large-range){font-size: 20px;}
-            @include breakpoint(medium-range){font-size: 20px;}
+            @include breakpoint(medium-range){font-size: 18px; margin: 0;}
             @include breakpoint(small-range){font-size: 1rem; padding: 0; margin: 1.5rem 0 0; }
         }
         &__span{
@@ -836,22 +857,6 @@ background: rgba(254,254,254,0.75);
   }
   // * End hamburger icon
 
-  @media screen and (max-width: 1320px) {
-    #primary,
-    .menu--secondary__menu,
-    .off-canvas-content .menu.social,
-    .search {
-      display: none;
-    }
-    #hamburger-icon{
-        display: block !important;
-    }
-  }
-  @media screen and (min-width: 1320px) {
-    #hamburger-icon{
-        display: none !important;
-    }
-  }
 
 .is-dropdown-submenu{
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
