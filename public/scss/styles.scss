@@ -724,7 +724,7 @@ a{
         font-size: 1rem;
         &:hover,
         &:focus{
-            background: rgba($green, 0.7);
+            background: rgba($green, 0.8);
         }
     }
     &-content{
@@ -736,10 +736,15 @@ a{
         padding: 0;
     }
     &__link{
+        border-bottom: 1px solid darken($gray, 10%) !important;
         display: block;
         line-height: 1.2;
-        margin: 0px 0;
+        margin: 3px 5px;
         padding: 10px;
+        &:hover,
+        &:focus{
+            background: rgba($green, 0.8);
+        }
     }
 }
 
