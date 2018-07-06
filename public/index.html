@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/foundation.css" />
     -->
   <link rel="stylesheet" href="/dist/styles.css" />
+
 <script src="https://use.fontawesome.com/b825622b14.js"></script>
 
 </head>
@@ -65,7 +66,10 @@ Header
 <div class="grid-x grid-marin-x grid-padding-x no-top-margin">
 <div class="cell medium-12">
 
-<nav id="mmenu">
+<a class="menu-trigger" href="#primary">Open the menu</a>
+
+
+<nav id="primary">
 <ul class="dropdown menu" data-dropdown-menu>
   <li>
     <a href="#">Policy &amp; Advocacy</a>
@@ -533,6 +537,7 @@ Footer
   <script src="/scripts/foundation.min.js"></script>
 -->
   <script src="/dist/scripts.js"></script>
+
   <script>
     $(document).foundation();
   </script>
@@ -574,6 +579,27 @@ $(function(){
 });
 </script>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ End Smooth Scroll ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<script>
+   $(document).ready(function() {
+
+// Make menu work with Mmenu script:
+
+  $("#primary").mmenu({
+      // options
+        extensions: ["multiline"],
+        offCanvas: {
+                position  : "bottom",
+                zposition : "front"
+              }
+    }, {
+      // configuration
+      clone: true
+    });
+
+  }); // End jQuery for custom scripts.
+
+</script>
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Muli:300,400,600,700" rel="stylesheet">
 

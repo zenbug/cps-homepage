@@ -740,12 +740,14 @@ a{
     background: $green;
     color: $gray;
 }
-/*
-.cell__2{
-    background: transparent url('/dist/images/beatriz-perez-moya-111685-unsplash.jpg') no-repeat 0 0;
-    background-size: contain;
+#primary{
+    display: block;
+    @include breakpoint(medium-range) { display: none; }
 }
-*/
+.menu-trigger{
+    display: none;
+    @include breakpoint(medium-range) { display: inline-block; }
+}
 .panel__img{
     //background: $cream;
     border-bottom: 2px solid $light-blue;
