@@ -714,18 +714,23 @@ a{
     padding: 10px;
 }
 
+.js-off-canvas-overlay{
+background: rgba(254,254,254,0.75);
+}
+
+
 // * Override Foundation accordion component styles here:
 .accordion{
     margin-top: 1rem;
     &-title{
-        background: $green;
+        background: $dark-blue;
         color: $gray !important;
         font-weight: 600;
         padding: 15px 10px;
         font-size: 1rem;
         &:hover,
         &:focus{
-            background: rgba($green, 0.8);
+            background: rgba($dark-blue, 0.8);
         }
     }
     &-content{
@@ -738,13 +743,18 @@ a{
     }
     &__link{
         border-bottom: 1px solid darken($gray, 10%) !important;
+        color: $dark-blue;
         display: block;
         line-height: 1.2;
         margin: 3px 5px;
         padding: 10px;
+        &:visited{
+            color: $dark-blue;
+        }
         &:hover,
         &:focus{
             background: rgba($green, 0.8);
+            color: #fff;
         }
     }
 }
@@ -824,9 +834,24 @@ a{
     width: 0%;
     left: 50%;
   }
-
-
   // * End hamburger icon
+
+  @media screen and (max-width: 1320px) {
+    #primary,
+    .menu--secondary__menu,
+    .off-canvas-content .menu.social,
+    .search {
+      display: none;
+    }
+    #hamburger-icon{
+        display: block !important;
+    }
+  }
+  @media screen and (min-width: 1320px) {
+    #hamburger-icon{
+        display: none !important;
+    }
+  }
 
 .is-dropdown-submenu{
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
