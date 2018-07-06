@@ -713,6 +713,37 @@ a{
     padding: 10px;
 }
 
+// * Override Foundation accordion component styles here:
+.accordion{
+    margin-top: 1rem;
+    &-title{
+        background: $green;
+        color: $gray !important;
+        font-weight: 600;
+        padding: 15px 10px;
+        font-size: 1rem;
+        &:hover,
+        &:focus{
+            background: rgba($green, 0.7);
+        }
+    }
+    &-content{
+        padding: 0;
+    }
+    &__list{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__link{
+        display: block;
+        line-height: 1.2;
+        margin: 0px 0;
+        padding: 10px;
+    }
+}
+
+
 // * Start hamburger icon styles
 #hamburger-icon {
     width: 35px;
