@@ -1,5 +1,5 @@
 @import "../../node_modules/foundation-sites/scss/foundation.scss";
-@import "jquery.mmenu.scss";
+@import "jquery.mmenu.all.scss";
 /* If I want to override any of Foundation's variables, I do so inside my own copy of _settings.scss. It's imported into the file foundation.scss. */
 
 @include foundation-everything;
@@ -926,6 +926,7 @@ a{
 
 .journal{
     //max-height: 90%;
+    @include breakpoint(medium-range) { margin: 2rem 0 ; }
     &__img-link{
         @include default-transition();
         border: 0 !important;
@@ -933,8 +934,8 @@ a{
         display: block;
         margin-top: -35px;
         transform: rotate(-4deg) scale(1); /* Firefox 16+, IE 10+, Opera */
-        @include breakpoint(medium-range){ width: 200px; margin: -20px auto 0; }
-        @include breakpoint(small-range){ width: 250px; margin: -20px auto 0; }
+        @include breakpoint(medium-range){ width: 200px; margin: -20px auto 0; margin-left: -32px;}
+        @include breakpoint(small-range){ width: 250px; margin: -20px auto 0;  }
         &:hover{
             box-shadow: 0px 10px 40px #aaa;
             transform: rotate(0deg) scale(1.07); /* Firefox 16+, IE 10+, Opera */
