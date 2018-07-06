@@ -742,35 +742,40 @@ background: rgba(254,254,254,0.75);
 
 // * Override Foundation accordion component styles here:
 .accordion{
+    background: transparent;
     margin-top: 1rem;
     &-title{
-        background: $dark-blue;
-        color: $gray !important;
+        //background: $dark-blue;
+        //color: $gray !important;
+        border: 0;
+        border-bottom: 1px solid darken($gray, 10%) !important;
         font-weight: 600;
         padding: 15px 10px;
-        font-size: 1rem;
+        font-size: inherit;
         &:hover,
         &:focus{
-            background: rgba($dark-blue, 0.8);
+            background: $green;
+            color: #fff;
         }
     }
     &-content{
         padding: 0;
     }
     &__list{
+        background: lighten($gray, 7%);
         list-style-type: none;
         margin: 0;
         padding: 0;
     }
     &__link{
         border-bottom: 1px solid darken($gray, 10%) !important;
-        color: $dark-blue;
+        color: $green;
         display: block;
         line-height: 1.2;
         margin: 3px 5px;
         padding: 10px;
         &:visited{
-            color: $dark-blue;
+            color: $green;
         }
         &:hover,
         &:focus{
