@@ -18,17 +18,15 @@
 <body>
   <div class="off-canvas-wrapper">
 
-<div id="hamburger-icon" data-toggle="offCanvas">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div><!-- /.hamburger-icon -->
-
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Start Off canvas ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+<div class="off-canvas position-right" id="offCanvas" data-off-canvas>
   <!-- Your menu or Off-canvas content goes here -->
 
+          <ul class="menu social">
+            <li><a class="social__item" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a class="social__item" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a class="social__item" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+          </ul><!-- /.social -->
           <ul class="">
            <li class="menu__item"><a href="#" class="menu__link">Français</a></li><!-- /.menu__item -->
            <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li><!-- /.menu__item -->
@@ -40,6 +38,41 @@
           <input type="submit" class="button search__btn" value="Go">
           </div><!-- /.input-group-button -->
           </div><!-- /.input-group -->
+
+<ul class="accordion" data-accordion>
+  <li class="accordion-item" data-accordion-item>
+    <!-- Accordion tab title -->
+    <a href="#" class="accordion-title">Policy &amp; Advocacy</a>
+    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+    <div class="accordion-content" data-tab-content>
+      <ul class="">
+        <li class=""><a href="/en/issues-questions">Child & Youth Health: Focus Issues</a></li>
+        <li class=""><a href="/en/documents">Position statements and practice points</a></li>
+        <li class=""><a href="/en/status-report">Status report: Are We Doing Enough</a></li>
+      </ul>
+    </div>
+  </li>
+
+<li class="accordion-item" data-accordion-item>
+    <!-- Accordion tab title -->
+    <a href="#" class="accordion-title">Clinical Practice</a>
+    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+    <div class="accordion-content" data-tab-content>
+      <ul class="">
+      <li class=""><a href="http://www.caringforkids.cps.ca">Information for parents and caregivers</a></li>
+      <li class=""><a href="http://www.kidsnewtocanada.ca">Caring for Kids New to Canada</a></li>
+      <li class=""><a href="/en/tools-outils">Clinical tools & resources</a></li>
+      <li class=""><a href="/en/documents">Position statements and practice points</a></li>
+      <li class=""><a href="/en/tools-outils/choosing-wisely-canada">Choosing Wisely Canada</a></li>
+      <li class=""><a href="/en/issues-questions">Child & Youth Health: Focus Issues</a></li>
+      </ul>
+    </div>
+  </li>
+
+</ul>
+
+
+<hr>
 
 <nav>
 <ul>
@@ -146,7 +179,13 @@ Header
     <div class="cell small-6 medium-8 large-3">
       <div class="grid-x grid-margin-x menu--secondary">
         <div class="cell shrink">
-        <ul class="menu social float-left">
+          <div id="hamburger-icon" data-toggle="offCanvas" class="show-for-small-only">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div><!-- /.hamburger-icon -->
+          <ul class="menu social float-left hide-for-small-only">
             <li><a class="social__item" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
             <li><a class="social__item" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
             <li><a class="social__item" href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
@@ -157,7 +196,7 @@ Header
            <li class="menu__item"><a href="#" class="menu__link">Member Login</a></li><!-- /.menu__item -->
           </ul><!-- /.menu -->
         </div><!-- /.cell -->
-        <div class="cell shrink show-for-large-only">
+        <div class="cell shrink show-for-medium">
           <div class="input-group input-group search ">
           <input class="input-group-field search__keywords" type="search" placeholder="Search the site">
           <div class="input-group-button">
@@ -690,14 +729,21 @@ $(function(){
 
 
 <script>
+// Hamburger icon:
 $(document).ready(function(){
 	$('#hamburger-icon').click(function(){
 		$(this).toggleClass('open');
 	});
   $('.is-overlay-fixed').click(function(){
-		$('#hamburger-icon').toggleClass('open');
+		$('#hamburger-icon').removeClass('open');
 	});
 });
+$(document).keyup(function(e){
+  // Close the hambuger icon when ESC key is pressed.
+  if(e.keyCode === 27)
+      $('#hamburger-icon').removeClass('open');
+});
+
 </script>
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Muli:300,400,600,700" rel="stylesheet">
