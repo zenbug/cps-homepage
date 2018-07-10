@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6{
     }
     .off-canvas .menu__link{
         font-size: inherit;
-        margin: 0;
+        margin: 5px;
         padding: 0.7rem;
     }
     .tagline__h1{
@@ -735,7 +735,7 @@ a{
             font-size: 1.1rem;
             margin: 0 2px;
             //padding: 1rem 0;
-            @include breakpoint(large-range) { font-size: 1.5rem; }
+
             &:hover{
                 background: $green;
                 color: white;
