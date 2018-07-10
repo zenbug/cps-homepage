@@ -200,6 +200,19 @@ h1, h2, h3, h4, h5, h6{
     .search {
       display: none;
     }
+    .off-canvas .menu--secondary__menu{
+        display: block;
+        margin-top: 5px;
+    }
+    .off-canvas .menu__item{
+        border: 0;
+        padding: 0;
+    }
+    .off-canvas .menu__link{
+        font-size: inherit;
+        margin: 0;
+        padding: 0.7rem;
+    }
     .tagline__h1{
         margin: 1rem;
     }
@@ -722,6 +735,7 @@ a{
             font-size: 1.1rem;
             margin: 0 2px;
             //padding: 1rem 0;
+            @include breakpoint(medium-range) { font-size: 1.5rem; }
             &:hover{
                 background: $green;
                 color: white;
